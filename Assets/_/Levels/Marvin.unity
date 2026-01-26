@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 150741063}
   - component: {fileID: 150741062}
   - component: {fileID: 150741061}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,10 @@ GameObject:
   - component: {fileID: 256625230}
   - component: {fileID: 256625229}
   - component: {fileID: 256625228}
+  - component: {fileID: 256625233}
   - component: {fileID: 256625227}
+  - component: {fileID: 256625231}
+  - component: {fileID: 256625232}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -344,6 +347,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &256625231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256625226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f63e256fffafd4bb0fbd65606a0f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Autorun.Autorun
+  Speed: 5
+--- !u!114 &256625232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256625226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
+  JumpForce: 5
+  rb: {fileID: 256625233}
+  auSol: 1
+--- !u!54 &256625233
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256625226}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &526642259
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +900,7 @@ GameObject:
   - component: {fileID: 1789226845}
   - component: {fileID: 1789226844}
   - component: {fileID: 1789226843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
