@@ -1,10 +1,8 @@
 {
-    "name": "Template.Editor",
-    "rootNamespace": "Template.Editor",
+    "name": "CameraRuntime",
+    "rootNamespace": "CameraRuntime",
     "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

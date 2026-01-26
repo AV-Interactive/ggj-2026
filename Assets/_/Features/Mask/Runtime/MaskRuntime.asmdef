@@ -1,6 +1,6 @@
 {
-    "name": "Template.Runtime",
-    "rootNamespace": "Template.Runtime",
+    "name": "MaskRuntime",
+    "rootNamespace": "MaskRuntime",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
