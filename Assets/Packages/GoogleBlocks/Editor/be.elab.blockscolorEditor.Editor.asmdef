@@ -1,0 +1,16 @@
+
+{                                                                   
+            "name": "be.elab.blockscolorEditor",          
+    "references": ["be.elab.blockscolor"
+],                                                              
+    "optionalUnityReferences": [],                                  
+    "includePlatforms": [                                           
+        "Editor"                                                    
+    ],                                                              
+    "excludePlatforms": [],                                         
+    "allowUnsafeCode": false,                                       
+    "overrideReferences": false,                                    
+    "precompiledReferences": [],                                    
+    "autoReferenced": true,                                         
+    "defineConstraints": []                                         
+}                                                                   
