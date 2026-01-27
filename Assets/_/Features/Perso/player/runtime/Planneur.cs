@@ -10,7 +10,6 @@ namespace PlayerRunTime
 
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private bool _isGliderActive = false;
-        [SerializeField] private float _normalGravityScale = 1f;
         [SerializeField] private float _fallingGravityScale = 2f;
         [SerializeField] private float _glidingGravityScale = 0.3f;
         [SerializeField] private float _fallThreshold = -0.1f;
