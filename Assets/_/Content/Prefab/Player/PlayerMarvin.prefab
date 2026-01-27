@@ -318,16 +318,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5469921775203218973}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
-  _rigidbody: {fileID: 0}
+  _characterController: {fileID: 6569010762502770471}
+  _autorun: {fileID: 4329795521087014579}
   _isGliderActive: 0
   _fallingGravityScale: 2
-  _glidingGravityScale: 0.2
+  _glidingGravityScale: 0.1
   _fallThreshold: -0.1
+  _baseGravity: -9.81
 --- !u!114 &4329795521087014579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +345,7 @@ MonoBehaviour:
   _speed: 5
   _characterController: {fileID: 6569010762502770471}
   _gravity: -9.81
-  _jumpForce: 5
+  _planneur: {fileID: 0}
 --- !u!114 &4518720512348961694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,21 +353,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5469921775203218973}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
   _jumpForce: 10
-  _rigidbody: {fileID: 0}
-  _inGround: 1
-  _isJump: 0
-  _onJump:
-    m_PersistentCalls:
-      m_Calls: []
-  _onJumpChanged:
-    m_PersistentCalls:
-      m_Calls: []
+  _characterController: {fileID: 6569010762502770471}
+  _autorun: {fileID: 4329795521087014579}
 --- !u!114 &7636600306648185238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,11 +495,14 @@ MonoBehaviour:
   m_inputAction: {fileID: 2116992049539582656, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
   m_onChanged:
     m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4518720512348961694}
-        m_TargetAssemblyTypeName: PlayerRunTime.Jump, PlayerRunTime
-        m_MethodName: SetJumpingState
-        m_Mode: 0
+        m_TargetAssemblyTypeName: PlayerRunTime.Jumps, PlayerRunTime
+        m_MethodName: Jump
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -513,9 +511,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_onDown:
-    m_PersistentCalls:
-      m_Calls: []
   m_onUp:
     m_PersistentCalls:
       m_Calls: []

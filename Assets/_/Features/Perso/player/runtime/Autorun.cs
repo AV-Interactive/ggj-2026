@@ -8,7 +8,7 @@ namespace PlayerRunTime
         [SerializeField] private float _speed;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private float _gravity = -9.81f;
-        [SerializeField] private float _jumpForce = 5f;
+        [SerializeField] private Planneur _planneur;
         #endregion
 
         #region Privates and Protected
@@ -19,6 +19,7 @@ namespace PlayerRunTime
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
+            _planneur = GetComponent<Planneur>();
         }
 
         private void Awake()
@@ -26,6 +27,11 @@ namespace PlayerRunTime
             if (_characterController == null)
             {
                 _characterController = GetComponent<CharacterController>();
+            }
+
+            if (_planneur == null)
+            {
+                _planneur = GetComponent<Planneur>();
             }
         }
 
@@ -52,19 +58,24 @@ namespace PlayerRunTime
                 _velocity.y = -2f; // Petite valeur pour rester collé au sol
             }
 
-            // Appliquer la gravité
-            _velocity.y += _gravity * Time.deltaTime;
+            // Obtenir le multiplicateur de gravité du planeur
+            float gravityMultiplier = _planneur != null ? _planneur.GetGravityMultiplier() : 1f;
+
+            // Appliquer la gravité avec le multiplicateur
+            _velocity.y += _gravity * gravityMultiplier * Time.deltaTime;
 
             // Appliquer la vélocité verticale
             _characterController.Move(_velocity * Time.deltaTime);
         }
 
-        public void Jump()
+        public Vector3 GetVelocity()
         {
-            if (_characterController.isGrounded)
-            {
-                _velocity.y = _jumpForce;
-            }
+            return _velocity;
+        }
+
+        public void SetVelocityY(float velocityY)
+        {
+            _velocity.y = velocityY;
         }
         #endregion
 

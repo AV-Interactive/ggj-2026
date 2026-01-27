@@ -1,67 +1,58 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace PlayerRunTime
 {
-    public class Jump : MonoBehaviour
+    public class Jumps : MonoBehaviour
     {
-
         #region Publics
-
-        [SerializeField] private float _jumpForce;
-        [SerializeField] private Rigidbody _rigidbody;
-        [SerializeField] private bool _inGround = true;
-        [SerializeField] private bool _isJump;
-        [SerializeField] private UnityEvent _onJump;
-        [SerializeField] private UnityEvent <bool> _onJumpChanged;
-
+        [SerializeField] private float _jumpForce = 5f;
+        [SerializeField] private CharacterController _characterController;
+        [SerializeField] private Autorun _autorun;
         #endregion
-
 
         #region Unity API
-        void Start()
+        private void Reset()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            _characterController = GetComponent<CharacterController>();
+            _autorun = GetComponent<Autorun>();
         }
 
-        void OnCollisionEnter(Collision collision)
+        private void Awake()
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            if (_characterController == null)
             {
-                _inGround = true;
-                _isJump = false;
+                _characterController = GetComponent<CharacterController>();
+            }
+
+            if (_autorun == null)
+            {
+                _autorun = GetComponent<Autorun>();
             }
         }
-        #endregion
 
+        #endregion
 
         #region Main Methods
-        public void SetJumpingState(bool isJump)
+        private void OnJump(bool isJumping)
         {
-            if (_isJump != isJump && isJump && _inGround)
+            Jump();
+        }
+
+        public void Jump()
+        {
+            if (_characterController.isGrounded)
             {
-                _onJumpChanged.Invoke(isJump);
-                _isJump = true;
-                _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-                _onJump.Invoke();
-                _inGround = false;
+                _autorun.SetVelocityY(_jumpForce);
             }
         }
         #endregion
 
-
         #region Utils
-
         /* Fonctions privées utiles */
-
         #endregion
 
-
         #region Privates and Protected
-
         // Variables privées
-
         #endregion
     }
 }
-

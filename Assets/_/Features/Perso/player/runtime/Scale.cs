@@ -4,7 +4,6 @@ namespace PlayerRunTime
 {
     public class Scale : MonoBehaviour
     {
-
         #region Publics
         [SerializeField] private Transform _scaleTransform;
         [SerializeField] private float _scaleX;
@@ -16,7 +15,6 @@ namespace PlayerRunTime
         [SerializeField] private bool _scaleUpAction;
         #endregion
 
-
         #region Unity API
 
         private void Update()
@@ -25,7 +23,6 @@ namespace PlayerRunTime
             ProcessScaling();
         }
         #endregion
-
 
         #region Main Methods
         public void OnScaleDown(bool scaleDownAction)
@@ -94,13 +91,11 @@ namespace PlayerRunTime
         }
         #endregion
 
-
         #region Utils
 
         /* Fonctions privées utiles */
 
         #endregion
-
 
         #region Privates and Protected
     private float _timer = 0f;
