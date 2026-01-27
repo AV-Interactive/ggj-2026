@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5438660457805462369}
   - component: {fileID: 4302580774941598860}
   m_Layer: 0
-  m_Name: ScaleUp
+  m_Name: ScaleUp(w)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 1523103321385604490}
   - component: {fileID: 3634737605560531541}
   m_Layer: 0
-  m_Name: ScaleDown
+  m_Name: ScaleDown(x)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 6463951682266897787}
   - component: {fileID: 5470413987743359451}
   - component: {fileID: 3171273889462994290}
-  - component: {fileID: 9158684737780011711}
+  - component: {fileID: 6569010762502770471}
   - component: {fileID: 8912503662708988031}
   - component: {fileID: 4329795521087014579}
   - component: {fileID: 4518720512348961694}
@@ -286,33 +286,31 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &9158684737780011711
-Rigidbody:
+--- !u!143 &6569010762502770471
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5469921775203218973}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5000001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8912503662708988031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,14 +318,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5469921775203218973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
-  _rigidbody: {fileID: 9158684737780011711}
+  _rigidbody: {fileID: 0}
   _isGliderActive: 0
-  _normalGravityScale: 1
   _fallingGravityScale: 2
   _glidingGravityScale: 0.2
   _fallThreshold: -0.1
@@ -343,7 +340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f63e256fffafd4bb0fbd65606a0f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Autorun.Autorun
-  Speed: 5
+  _speed: 5
+  _characterController: {fileID: 6569010762502770471}
+  _gravity: -9.81
+  _jumpForce: 5
 --- !u!114 &4518720512348961694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,13 +351,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5469921775203218973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
   _jumpForce: 10
-  _rigidbody: {fileID: 9158684737780011711}
+  _rigidbody: {fileID: 0}
   _inGround: 1
   _isJump: 0
   _onJump:
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 6169769639909850431}
   - component: {fileID: 3522939303384547129}
   m_Layer: 0
-  m_Name: Planneur
+  m_Name: Planneur(c)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_onUp:
     m_PersistentCalls:
       m_Calls: []
-  m_isPressed: 1
+  m_isPressed: 0
 --- !u!1 &6945288006702119813
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 1013340866756111798}
   - component: {fileID: 5404674970657511222}
   m_Layer: 0
-  m_Name: Jump
+  m_Name: Jump(space)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
