@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 591291999}
   - component: {fileID: 591291998}
   - component: {fileID: 591291997}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: plateform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7636600306648185238, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: _obstacleLayer.m_Bits
-      value: 104
+      value: 168
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 1299631218}
   - component: {fileID: 1299631217}
   - component: {fileID: 1299631216}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: plateform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 1799452524}
   - component: {fileID: 1799452523}
   - component: {fileID: 1799452522}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: plateform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
