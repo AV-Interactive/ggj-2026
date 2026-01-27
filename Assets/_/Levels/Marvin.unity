@@ -350,9 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
-  JumpForce: 5
-  rb: {fileID: 256625233}
-  InGround: 1
+  _jumpForce: 5
+  _rigidbody: {fileID: 256625233}
+  _inGround: 1
+  _isJump: 0
 --- !u!54 &256625233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,12 +393,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d8f4598eb43de439719b948a0044c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Scale
-  scaleTransfom: {fileID: 256625230}
-  scaleX: 0.1
-  scaleY: 0.1
-  scaleZ: 0.1
-  scaleTime: 5
-  speedScale: 10
+  _scaleTransform: {fileID: 256625230}
+  _scaleX: 0.1
+  _scaleY: 0.1
+  _scaleZ: 0.1
+  _scaleTime: 5
+  _speedScale: 10
+  _scaleDownAction: 1
+  _scaleUpAction: 1
 --- !u!65 &256625235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -419,6 +422,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &278836820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278836821}
+  - component: {fileID: 278836822}
+  m_Layer: 0
+  m_Name: Jump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &278836821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278836820}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1239304047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278836822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278836820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: 2116992049539582656, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256625232}
+        m_TargetAssemblyTypeName: PlayerRunTime.Jump, PlayerRunTime
+        m_MethodName: SetJumpingState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1 &526642259
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +864,107 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1167306531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1167306532}
+  - component: {fileID: 1167306533}
+  m_Layer: 0
+  m_Name: ScaleUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1167306532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167306531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1239304047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167306533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167306531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: -1486320124467910595, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256625234}
+        m_TargetAssemblyTypeName: Scale, PlayerRunTime
+        m_MethodName: OnScaleUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
+--- !u!1 &1239304046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239304047}
+  m_Layer: 0
+  m_Name: MaskInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239304047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239304046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.47858, y: -6.55855, z: -0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 278836821}
+  - {fileID: 1167306532}
+  - {fileID: 2124517348}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299631215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1187,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124517347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124517348}
+  - component: {fileID: 2124517349}
+  m_Layer: 0
+  m_Name: ScaleDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124517348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124517347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1239304047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124517349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124517347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: 850227315496627441, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 256625234}
+        m_TargetAssemblyTypeName: Scale, PlayerRunTime
+        m_MethodName: OnScaleDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1027,3 +1265,4 @@ SceneRoots:
   - {fileID: 1299631219}
   - {fileID: 150741064}
   - {fileID: 256625230}
+  - {fileID: 1239304047}
