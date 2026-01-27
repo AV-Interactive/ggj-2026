@@ -8,10 +8,12 @@ namespace PlayerRunTime
 
         #region Publics
 
-        [SerializeField] private Rigidbody _rigibody;
+        [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private bool _isGliderActive = false;
         [SerializeField] private float _normalGravityScale = 1f;
         [SerializeField] private float _fallingGravityScale = 2f;
-        [SerializeField] private float _fallThreshold = -0.1f; // Vitesse Y en dessous de laquelle on considère être en chute
+        [SerializeField] private float _glidingGravityScale = 0.3f;
+        [SerializeField] private float _fallThreshold = -0.1f;
 
         #endregion
 
@@ -20,10 +22,15 @@ namespace PlayerRunTime
 
         private void Awake()
         {
-            if (_rigibody == null)
+            if (_rigidbody == null)
             {
-                _rigibody = GetComponent<Rigidbody>();
+                _rigidbody = GetComponent<Rigidbody>();
             }
+        }
+
+        private void FixedUpdate()
+        {
+            ApplyGravityModifier();
         }
 
         #endregion
@@ -31,14 +38,35 @@ namespace PlayerRunTime
 
         #region Main Methods
 
-        // 
+        private void ApplyGravityModifier()
+        {
+            if (_isGliderActive && IsFalling())
+            {
+                // Mode planeur : gravité réduite
+                float gravityReduction = 1f - _glidingGravityScale;
+                _rigidbody.AddForce(Physics.gravity * -gravityReduction, ForceMode.Acceleration);
+            }
+            else if (IsFalling())
+            {
+                // Chute normale : gravité augmentée
+                _rigidbody.AddForce(Physics.gravity * (_fallingGravityScale - 1f), ForceMode.Acceleration);
+            }
+        }
+
+        public void SetGliderActive(bool isActive)
+        {
+            _isGliderActive = isActive;
+        }
 
         #endregion
 
 
         #region Utils
 
-        /* Fonctions privées utiles */
+        private bool IsFalling()
+        {
+            return _rigidbody.linearVelocity.y < _fallThreshold;
+        }
 
         #endregion
 
