@@ -59,6 +59,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7655015e-a2e8-4aa3-9679-c4ba72f9880a",
+                    "path": "<HID::USB gamepad>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6ed408c3-1b5b-47fa-be2b-421665c2d657",
                     "path": "<Keyboard>/z",
                     "interactions": "",
@@ -70,8 +81,52 @@
                 },
                 {
                     "name": "",
+                    "id": "3e0f9360-e346-4200-94f2-6a3c7d7993be",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScaleDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90d6d505-f64b-42a6-aa54-6fef9c0db567",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScaleDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6fee6662-1a8f-4258-b924-086155aa7497",
                     "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScaleUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3fe42e38-a22c-445b-b005-5d3ed95d4695",
+                    "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScaleUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "718e595e-01e1-4982-8e32-0c0ace13b1f8",
+                    "path": "<HID::USB gamepad>/button2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

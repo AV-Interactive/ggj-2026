@@ -16,7 +16,7 @@ namespace PlayerRunTime
 
         private void Update()
         {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * Speed * Time.deltaTime);
         }
 
         #endregion
