@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace Enemy.Runtime
 {
+    public enum EnemyType
+    {
+        Trap,
+        Beast
+    }
+    
     public class Enemy : MonoBehaviour
     {
 
@@ -29,6 +35,8 @@ namespace Enemy.Runtime
         #region Utils
 
         /* Fonctions privées utiles */
+        [SerializeField] int enemyHp;
+        [SerializeField] EnemyType  type;
 
         #endregion
 
