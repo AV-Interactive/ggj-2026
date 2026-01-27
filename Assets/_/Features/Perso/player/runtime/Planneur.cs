@@ -1,62 +1,65 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace PlayerRunTime
 {
     public class Planneur : MonoBehaviour
     {
-
         #region Publics
-
-        [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private CharacterController _characterController;
+        [SerializeField] private Autorun _autorun;
         [SerializeField] private bool _isGliderActive = false;
         [SerializeField] private float _fallingGravityScale = 2f;
-        [SerializeField] private float _glidingGravityScale = 0.3f;
+        [SerializeField] private float _glidingGravityScale = 0.1f;
         [SerializeField] private float _fallThreshold = -0.1f;
-
+        [SerializeField] private float _baseGravity = -9.81f;
         #endregion
 
-
         #region Unity API
+        private void Reset()
+        {
+            _characterController = GetComponent<CharacterController>();
+            _autorun = GetComponent<Autorun>();
+        }
 
         private void Awake()
         {
-            if (_rigidbody == null)
+            if (_characterController == null)
             {
-                _rigidbody = GetComponent<Rigidbody>();
+                _characterController = GetComponent<CharacterController>();
+            }
+
+            if (_autorun == null)
+            {
+                _autorun = GetComponent<Autorun>();
             }
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            ApplyGravityModifier();
+            CheckGroundCollision();
         }
-
-        void OnCollisionEnter(Collision collision)
-        {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-            {
-                _isGliderActive = false;
-            }
-        }
-
         #endregion
 
-
         #region Main Methods
-
-        private void ApplyGravityModifier()
+        public float GetGravityMultiplier()
         {
-            if (_isGliderActive && IsFalling())
+            if (_isGliderActive && _autorun.GetVelocity().y < _fallThreshold)
             {
-                // Mode planeur : gravité réduite
-                float gravityReduction = 1f - _glidingGravityScale;
-                _rigidbody.AddForce(Physics.gravity * -gravityReduction, ForceMode.Acceleration);
+                return _glidingGravityScale;
             }
-            else if (IsFalling())
+            else if (_autorun.GetVelocity().y < _fallThreshold)
             {
-                // Chute normale : gravité augmentée
-                _rigidbody.AddForce(Physics.gravity * (_fallingGravityScale - 1f), ForceMode.Acceleration);
+                return _fallingGravityScale;
+            }
+
+            return 1f;
+        }
+
+        private void CheckGroundCollision()
+        {
+            if (_characterController.isGrounded)
+            {
+                _isGliderActive = false;
             }
         }
 
@@ -65,24 +68,21 @@ namespace PlayerRunTime
             _isGliderActive = true;
         }
 
+        public bool IsGliderActive()
+        {
+            return _isGliderActive;
+        }
         #endregion
-
 
         #region Utils
-
         private bool IsFalling()
         {
-            return _rigidbody.linearVelocity.y < _fallThreshold;
+            return _autorun.GetVelocity().y < _fallThreshold;
         }
-
         #endregion
 
-
         #region Privates and Protected
-
         // Variables privées
-
         #endregion
     }
 }
-
