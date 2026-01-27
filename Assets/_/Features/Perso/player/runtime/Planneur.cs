@@ -33,6 +33,14 @@ namespace PlayerRunTime
             ApplyGravityModifier();
         }
 
+        void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                _isGliderActive = false;
+            }
+        }
+
         #endregion
 
 
