@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Enemy.Runtime
@@ -28,9 +29,16 @@ namespace Enemy.Runtime
             transform.Translate(Vector3.forward * _speed * Time.deltaTime);
         }
 
+        void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            {
+                EventsRuntime.EnemyEvents.RaiseHit(gameObject);
+            }
+        }
+
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log($"Collision avec {other.gameObject.name}");
             if (other.gameObject == _GPPRight.gameObject)
             {
                 transform.rotation = Quaternion.Euler(0f, -90f, 0f);
@@ -54,7 +62,15 @@ namespace Enemy.Runtime
 
         #region Utils
 
-        /* Fonctions privées utiles */
+        //
+
+        float _currentX;
+
+        #endregion
+
+
+        #region Privates and Protected
+
         [Header("The Enemy")]
         [SerializeField] int _enemyHp;
         [SerializeField] EnemyType  _type;
@@ -68,15 +84,8 @@ namespace Enemy.Runtime
         [SerializeField] GameObject _GPPRight;
         [SerializeField] GameObject _GPPUp;
         [SerializeField] GameObject _GPPDown;
-
-        float _currentX;
-
-        #endregion
-
-
-        #region Privates and Protected
-
-        // Variables privées
+        
+        UnityEvent<GameObject> _collisionEvent = new UnityEvent<GameObject>();
 
         #endregion
     }
