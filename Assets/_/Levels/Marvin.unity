@@ -242,10 +242,11 @@ GameObject:
   - component: {fileID: 256625230}
   - component: {fileID: 256625229}
   - component: {fileID: 256625228}
+  - component: {fileID: 256625235}
   - component: {fileID: 256625233}
-  - component: {fileID: 256625227}
   - component: {fileID: 256625231}
   - component: {fileID: 256625232}
+  - component: {fileID: 256625234}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -253,29 +254,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &256625227
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256625226}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &256625228
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -331,7 +309,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256625226}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &256625230
 Transform:
   m_ObjectHideFlags: 0
@@ -359,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f63e256fffafd4bb0fbd65606a0f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Autorun.Autorun
-  Speed: 5
+  Speed: 1
 --- !u!114 &256625232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
   JumpForce: 5
   rb: {fileID: 256625233}
-  auSol: 1
+  InGround: 1
 --- !u!54 &256625233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -402,6 +380,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &256625234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256625226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d8f4598eb43de439719b948a0044c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Scale
+  scaleTransfom: {fileID: 256625230}
+  scaleX: 0.1
+  scaleY: 0.1
+  scaleZ: 0.1
+  scaleTime: 5
+  speedScale: 10
+--- !u!65 &256625235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256625226}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &526642259
 GameObject:
   m_ObjectHideFlags: 0

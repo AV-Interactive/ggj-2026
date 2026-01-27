@@ -9,7 +9,7 @@ namespace PlayerRunTime
 
         [SerializeField] public float JumpForce;
         [SerializeField] private Rigidbody rb;
-        [SerializeField] private bool auSol = true;
+        [SerializeField] private bool InGround = true;
 
         #endregion
 
@@ -23,10 +23,10 @@ namespace PlayerRunTime
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && auSol)
+            if (Input.GetKeyDown(KeyCode.Space) && InGround)
             {
                 rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-                auSol = false;
+                InGround = false;
             }
         }
 
@@ -39,7 +39,7 @@ namespace PlayerRunTime
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
-                auSol = true;
+                InGround = true;
             }
         }
 
