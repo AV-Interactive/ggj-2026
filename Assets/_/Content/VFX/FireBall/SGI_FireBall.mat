@@ -65,6 +65,7 @@ Material:
     - _Cull: 0
     - _DstBlend: 10
     - _DstBlendAlpha: 10
+    - _MainTexPower: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -74,8 +75,9 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _MainTexSpeed: {r: 1, g: 0, b: 0, a: 0}
+    - _Color: {r: 19.326647, g: 2.9415348, b: 0.8204705, a: 1}
+    - _Color2: {r: 1, g: 0, b: 0.15399837, a: 1}
+    - _MainTexSpeed: {r: 0, g: 2, b: 0, a: 0}
     - _MainTexTiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -52,10 +52,10 @@ Material:
     - _QueueOffset: 0
     - _ScaleNoiseDisolve: 1
     m_Colors:
-    - _Color01: {r: 1.1353015, g: 0.30171406, b: 0, a: 1}
+    - _Color01: {r: 3.3911662, g: 0.373789, b: 0, a: 1}
     - _DisolveSpeed: {r: -0.5, g: 0, b: 0, a: 0}
     - _MainTexSpeed: {r: -0.25, g: 0, b: 0, a: 0}
-    - _color02: {r: 0.026712975, g: 1.1353015, b: 1.1250738, a: 1}
+    - _color02: {r: 1.1353015, g: 0.029719925, b: 0.051597465, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2728312101492371094

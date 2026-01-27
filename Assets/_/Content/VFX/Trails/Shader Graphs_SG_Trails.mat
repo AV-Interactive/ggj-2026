@@ -41,6 +41,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: a8b9233481fe1b94abd0251fe8c58695, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f1c92228b78142f4b5ae6bfe593705dc_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d05c1661f6911c645adccbd9384b5fd3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f48b87498ad046e5be7f82cecfd329eb_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: d05c1661f6911c645adccbd9384b5fd3, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -65,9 +69,9 @@ Material:
     - _QueueOffset: 0
     - _ScaleNoiseDisolve: 1
     m_Colors:
-    - _Color01: {r: 1.1353015, g: 0, b: 0, a: 1}
+    - _Color01: {r: 1.7207953, g: 0, b: 0, a: 1}
     - _DisolveSpeed: {r: -0.5, g: 0, b: 0, a: 0}
     - _MainTexSpeed: {r: -0.5, g: 0, b: 0, a: 0}
-    - _color02: {r: 0.026775973, g: 0.3000579, b: 1.1353015, a: 1}
+    - _color02: {r: 3.4415905, g: 0.6863234, b: 0.09009396, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
