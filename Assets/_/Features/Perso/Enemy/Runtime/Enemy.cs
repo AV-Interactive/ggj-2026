@@ -20,7 +20,7 @@ namespace Enemy.Runtime
 
         #region Unity API
 
-        //
+        Upd
 
         #endregion
 
@@ -35,8 +35,14 @@ namespace Enemy.Runtime
         #region Utils
 
         /* Fonctions privées utiles */
-        [SerializeField] int enemyHp;
-        [SerializeField] EnemyType  type;
+        [SerializeField] int _enemyHp;
+        [SerializeField] EnemyType  _type;
+        [Header("Goal X Left")]
+        [SerializeField] float _goalXLeft = 5f;
+        [Header("Goal X Right")]
+        [SerializeField] float _goalXRight = 5f;
+        
+        Vector3 _initialPosition;
 
         #endregion
 
