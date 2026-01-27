@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerRunTime
 {
@@ -7,42 +8,45 @@ namespace PlayerRunTime
 
         #region Publics
 
-        [SerializeField] public float JumpForce;
-        [SerializeField] private Rigidbody rb;
-        [SerializeField] private bool InGround = true;
+        [SerializeField] private float _jumpForce;
+        [SerializeField] private Rigidbody _rigidbody;
+        [SerializeField] private bool _inGround = true;
+        [SerializeField] private bool _isJump;
+        [SerializeField] private UnityEvent _onJump;
+        [SerializeField] private UnityEvent <bool> _onJumpChanged;
 
         #endregion
 
 
         #region Unity API
-
         void Start()
         {
-            rb = GetComponent<Rigidbody>();
+            _rigidbody = GetComponent<Rigidbody>();
         }
-
-        void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && InGround)
-            {
-                rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-                InGround = false;
-            }
-        }
-
-        #endregion
-
-
-        #region Main Methods
 
         void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
-                InGround = true;
+                _inGround = true;
+                _isJump = false;
             }
         }
+        #endregion
 
+
+        #region Main Methods
+        public void SetJumpingState(bool isJump)
+        {
+            if (_isJump != isJump && isJump && _inGround)
+            {
+                _onJumpChanged.Invoke(isJump);
+                _isJump = true;
+                _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+                _onJump.Invoke();
+                _inGround = false;
+            }
+        }
         #endregion
 
 
