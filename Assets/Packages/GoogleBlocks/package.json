@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.blockscolor",                              
+  "displayName": "Blocks Color",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Blocks color",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"Eloi Stree",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_10_16_BlocksColor.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
