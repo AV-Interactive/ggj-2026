@@ -11,7 +11,6 @@ namespace PlayerRunTime
         [SerializeField] private float _fallingGravityScale = 2f;
         [SerializeField] private float _glidingGravityScale = 0.1f;
         [SerializeField] private float _fallThreshold = -0.1f;
-        [SerializeField] private float _baseGravity = -9.81f;
         #endregion
 
         #region Unity API

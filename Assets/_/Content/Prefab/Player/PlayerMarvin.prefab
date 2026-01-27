@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5438660457805462369}
   - component: {fileID: 4302580774941598860}
   m_Layer: 0
-  m_Name: ScaleUp(w)
+  m_Name: ScaleUp(x)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 1523103321385604490}
   - component: {fileID: 3634737605560531541}
   m_Layer: 0
-  m_Name: ScaleDown(x)
+  m_Name: ScaleDown(w)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,6 @@ MonoBehaviour:
   _fallingGravityScale: 2
   _glidingGravityScale: 0.1
   _fallThreshold: -0.1
-  _baseGravity: -9.81
 --- !u!114 &4329795521087014579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +380,9 @@ MonoBehaviour:
   _speedScale: 10
   _scaleDownAction: 1
   _scaleUpAction: 1
+  _obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 104
 --- !u!1 &6927814403425477664
 GameObject:
   m_ObjectHideFlags: 0
