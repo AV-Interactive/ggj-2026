@@ -13,11 +13,6 @@ namespace PlayerRunTime
         [SerializeField] public float scaleZ;
         [SerializeField] public float scaleTime = 5f;
         [SerializeField] public float speedScale;
-        private float timer = 0f;
-        private bool isScalingDown = false;
-        private bool isScalingUp = false;
-        private float currentScaleTime = 0f;
-
 
         #endregion
 
@@ -27,7 +22,13 @@ namespace PlayerRunTime
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (hasScaledDown && hasScaledUp)
+            {
+                hasScaledDown = false;
+                hasScaledUp = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Z) && !hasScaledDown)
             {
                 isScalingDown = true;
                 isScalingUp = false;
@@ -35,7 +36,7 @@ namespace PlayerRunTime
                 currentScaleTime = scaleTime;
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKeyDown(KeyCode.X) && !hasScaledUp)
             {
                 isScalingUp = true;
                 isScalingDown = false;
@@ -54,6 +55,7 @@ namespace PlayerRunTime
                     if (currentScaleTime < 1f)
                     {
                         isScalingDown = false;
+                        hasScaledDown = true;
                     }
                 }
             }
@@ -69,6 +71,7 @@ namespace PlayerRunTime
                     if (currentScaleTime < 1f)
                     {
                         isScalingUp = false;
+                        hasScaledUp = true;
                     }
                 }
             }
@@ -93,7 +96,12 @@ namespace PlayerRunTime
 
         #region Privates and Protected
 
-        // Variables privées
+        private float timer = 0f;
+        private bool isScalingDown = false;
+        private bool isScalingUp = false;
+        private float currentScaleTime = 0f;
+        private bool hasScaledDown = false;
+        private bool hasScaledUp = false;
 
         #endregion
     }
