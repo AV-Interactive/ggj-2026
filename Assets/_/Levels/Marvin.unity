@@ -469,34 +469,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &773785282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-  m_PrefabInstance: {fileID: 902435142}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &773785286 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 9158684737780011711, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-  m_PrefabInstance: {fileID: 902435142}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &773785291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773785282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
-  _rigidbody: {fileID: 773785286}
-  _isGliderActive: 0
-  _normalGravityScale: 1
-  _fallingGravityScale: 2
-  _glidingGravityScale: 0.2
-  _fallThreshold: -0.1
 --- !u!1 &866246841
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +614,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2775219244774742408, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Name
+      value: ScaleUp(w)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933574888527543957, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Name
+      value: ScaleDown(x)
+      objectReference: {fileID: 0}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.08
@@ -682,29 +662,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: Speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4518720512348961694, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: _jumpForce
-      value: 10
+    - target: {fileID: 3522939303384547129, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_isPressed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_Name
       value: PlayerMarvin
       objectReference: {fileID: 0}
-    - target: {fileID: 9158684737780011711, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_Constraints
-      value: 120
+    - target: {fileID: 6927814403425477664, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Name
+      value: Planneur(c)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945288006702119813, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Name
+      value: Jump(space)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 773785291}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 027c5b2350f62244b98026d80d896031, type: 3}
 --- !u!1 &1299631215
 GameObject:

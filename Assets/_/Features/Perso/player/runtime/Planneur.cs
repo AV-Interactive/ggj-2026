@@ -63,7 +63,7 @@ namespace PlayerRunTime
 
         public void SetGliderActive(bool isActive)
         {
-            _isGliderActive = isActive;
+            _isGliderActive = true;
         }
 
         #endregion
