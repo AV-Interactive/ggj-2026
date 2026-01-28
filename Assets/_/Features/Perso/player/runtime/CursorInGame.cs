@@ -6,7 +6,7 @@ namespace PlayerRunTime
     {
         #region Publics
 
-        //
+        public Vector2 _mousePosition;
 
         #endregion
 
@@ -15,19 +15,22 @@ namespace PlayerRunTime
         private void Awake()
         {
             _rectTransform =GetComponent<RectTransform>();
-            Cursor.visible = false;
+            Cursor.visible = true;
         }
 
         private void Update()
         {
-            _rectTransform.position = Input.mousePosition;
+            _rectTransform.position = _mousePosition;
         }
 
         #endregion
 
         #region Main Methods
 
-        // 
+        public void SetMousePositon(Vector2 mousePosition)
+        {
+            _mousePosition = mousePosition;
+        }
 
         #endregion
 
