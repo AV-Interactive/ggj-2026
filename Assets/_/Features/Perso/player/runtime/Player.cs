@@ -86,17 +86,19 @@ namespace PlayerRunTime
         {
             foreach (var script in _skillScripts)
             {
-                script.enabled = false;
+                script.Script.enabled = false;
             }
         }
 
         void UpdateSkill(EnumSkill skill)
         {
-            int skillIndex = (int)skill;
-            DisableAllSkills();
-            EnemyEvents.RaiseChangeSkill(skill);
-            _skillScripts[skillIndex].enabled = true;
-            Debug.Log($"SkillName : {skill}, index : {skillIndex.ToString()}");
+            var script = _skillScripts.Find(s => s.Skill == skill);
+            
+            if(script != null && script.Script != null)
+            {
+                script.Script.enabled = true;
+                EnemyEvents.RaiseChangeSkill(skill);
+            }
         }
 
         #endregion
@@ -106,12 +108,18 @@ namespace PlayerRunTime
 
         // Variables privées
         //[SerializeField] List<EnumSkill> _skillsList = new List<EnumSkill>();
-        [SerializeField] List<MonoBehaviour> _skillScripts = new List<MonoBehaviour>();
+        [SerializeField] List<SkillToScript> _skillScripts = new List<SkillToScript>();
         
-        int _indexSkill = 0;
-        EnumSkill _skillSelected;
+        public EnumSkill _skillSelected;
 
         #endregion
+    }
+    
+    [Serializable]
+    public class SkillToScript
+    {
+        public EnumSkill Skill;
+        public MonoBehaviour Script;
     }
 }
 
