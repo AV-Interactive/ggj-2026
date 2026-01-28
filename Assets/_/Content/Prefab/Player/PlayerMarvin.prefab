@@ -1,5 +1,60 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &404571272992185888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3280410500781184456}
+  - component: {fileID: 3994450488975891613}
+  m_Layer: 0
+  m_Name: Fire(LeftClickMouse)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3280410500781184456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404571272992185888}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5959762007864126449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3994450488975891613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404571272992185888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: -4358233899083828744, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1 &2775219244774742408
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +222,38 @@ Transform:
   - {fileID: 5438660457805462369}
   - {fileID: 1523103321385604490}
   - {fileID: 6169769639909850431}
+  - {fileID: 3280410500781184456}
+  m_Father: {fileID: 3470075897973312946}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3367413131907574869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5248287044315138707}
+  m_Layer: 0
+  m_Name: SpawnProjectil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5248287044315138707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3367413131907574869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.14, z: 0.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 3470075897973312946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5469921775203218973
@@ -182,6 +269,7 @@ GameObject:
   - component: {fileID: 5470413987743359451}
   - component: {fileID: 3171273889462994290}
   - component: {fileID: 6569010762502770471}
+  - component: {fileID: 5300572399960359200}
   - component: {fileID: 8912503662708988031}
   - component: {fileID: 4329795521087014579}
   - component: {fileID: 4518720512348961694}
@@ -207,6 +295,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5959762007864126449}
+  - {fileID: 5248287044315138707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6463951682266897787
@@ -311,6 +400,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5300572399960359200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5469921775203218973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f48c6f562698174a8146aeb4706eb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.ProjectilShooter
+  _projectilPrefab: {fileID: 5503110094771408583, guid: df84a5b6ecf215d4cbfa64bd7d2837cb, type: 3}
+  _firePoint: {fileID: 5248287044315138707}
+  _camera: {fileID: 0}
 --- !u!114 &8912503662708988031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +448,7 @@ MonoBehaviour:
   _speed: 5
   _characterController: {fileID: 6569010762502770471}
   _gravity: -9.81
-  _planneur: {fileID: 0}
+  _planneur: {fileID: 8912503662708988031}
 --- !u!114 &4518720512348961694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +486,7 @@ MonoBehaviour:
   _scaleUpAction: 1
   _obstacleLayer:
     serializedVersion: 2
-    m_Bits: 104
+    m_Bits: 168
 --- !u!1 &6927814403425477664
 GameObject:
   m_ObjectHideFlags: 0
