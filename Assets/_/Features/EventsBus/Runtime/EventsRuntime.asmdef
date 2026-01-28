@@ -1,9 +1,7 @@
 {
-    "name": "PlayerRunTime",
-    "rootNamespace": "PlayerRunTime",
-    "references": [
-        "GUID:898b06506281c41e894a78c599c2099d"
-    ],
+    "name": "EventsRuntime",
+    "rootNamespace": "EventsRuntime",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
