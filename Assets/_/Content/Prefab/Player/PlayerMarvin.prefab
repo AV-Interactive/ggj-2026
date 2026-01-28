@@ -44,10 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
-  m_inputAction: {fileID: -4358233899083828744, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_inputAction: {fileID: -4943180167681335429, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
   m_onChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5300572399960359200}
+        m_TargetAssemblyTypeName: PlayerRunTime.CreatProjectil, PlayerRunTime
+        m_MethodName: OnShoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onDown:
     m_PersistentCalls:
       m_Calls: []
@@ -55,6 +67,85 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_isPressed: 0
+--- !u!1 &2196340646901892712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8778859646371789835}
+  - component: {fileID: 5364437852268639597}
+  m_Layer: 0
+  m_Name: InputToMouse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8778859646371789835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196340646901892712}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -19.041103, y: 10.97182, z: 34.507683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5959762007864126449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5364437852268639597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196340646901892712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0513fc6db4de52419f64a02ca8cf4db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputJoystick
+  m_inputAction: {fileID: -3200501502604445813, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
+  m_onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerRunTime.CursorInGame, PlayerRunTime
+        m_MethodName: SetMousePositon
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5300572399960359200}
+        m_TargetAssemblyTypeName: PlayerRunTime.CreateProjectile, PlayerRunTime
+        m_MethodName: SetMousePosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_joystickValue: {x: 0, y: 0}
+  m_onValueChangedX:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onValueChangedY:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2775219244774742408
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5438660457805462369
 Transform:
   m_ObjectHideFlags: 0
@@ -166,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
-  m_inputAction: {fileID: 850227315496627441, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_inputAction: {fileID: -6949793698430928324, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
   m_onChanged:
     m_PersistentCalls:
       m_Calls:
@@ -223,6 +314,8 @@ Transform:
   - {fileID: 1523103321385604490}
   - {fileID: 6169769639909850431}
   - {fileID: 3280410500781184456}
+  - {fileID: 8778859646371789835}
+  - {fileID: 7980886288773668609}
   m_Father: {fileID: 3470075897973312946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3367413131907574869
@@ -256,6 +349,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3470075897973312946}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3900528272970435269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7980886288773668609}
+  - component: {fileID: 3932017120368047049}
+  - component: {fileID: 2199329323709335896}
+  m_Layer: 0
+  m_Name: Restart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7980886288773668609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900528272970435269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5959762007864126449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3932017120368047049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900528272970435269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: -6815236969462974888, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2199329323709335896}
+        m_TargetAssemblyTypeName: LevelDesignScript.RestartLevel, LevelDesignScript
+        m_MethodName: RestartCurrentLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
+--- !u!114 &2199329323709335896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900528272970435269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99d1ef66d22e2b448d09c3ea1743abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: LevelDesignScript::LevelDesignScript.RestartLevel
 --- !u!1 &5469921775203218973
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +588,8 @@ MonoBehaviour:
   _projectilPrefab: {fileID: 5503110094771408583, guid: df84a5b6ecf215d4cbfa64bd7d2837cb, type: 3}
   _firePoint: {fileID: 5248287044315138707}
   _camera: {fileID: 0}
+  _maxDistance: 100
+  _mousePosition: {x: 0, y: 0}
 --- !u!114 &8912503662708988031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
-  m_inputAction: {fileID: -4222347926285461022, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_inputAction: {fileID: 5482092567014230275, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
   m_onChanged:
     m_PersistentCalls:
       m_Calls:
@@ -598,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
-  m_inputAction: {fileID: 2116992049539582656, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_inputAction: {fileID: 8314749971607558796, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
   m_onChanged:
     m_PersistentCalls:
       m_Calls: []

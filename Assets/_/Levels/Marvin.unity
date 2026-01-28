@@ -669,28 +669,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &598821020 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8912503662708988031, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-  m_PrefabInstance: {fileID: 902435142}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
---- !u!114 &598821026 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5300572399960359200, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-  m_PrefabInstance: {fileID: 902435142}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f48c6f562698174a8146aeb4706eb36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.ProjectilShooter
 --- !u!1 &866246841
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,42 +854,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 598821026}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnShoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerRunTime.CreatProjectil, PlayerRunTime
-      objectReference: {fileID: 0}
-    - target: {fileID: 3994450488975891613, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: _speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      propertyPath: _planneur
-      value: 
-      objectReference: {fileID: 598821020}
     - target: {fileID: 5300572399960359200, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: _camera
       value: 
       objectReference: {fileID: 866246843}
+    - target: {fileID: 5364437852268639597, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 524623386}
     - target: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_Name
       value: PlayerMarvin
@@ -1333,73 +1283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1832972773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1832972775}
-  - component: {fileID: 1832972774}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1832972774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832972773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0513fc6db4de52419f64a02ca8cf4db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputJoystick
-  m_inputAction: {fileID: 6451465019482394392, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
-  m_onValueChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 524623386}
-        m_TargetAssemblyTypeName: PlayerRunTime.CursorInGame, PlayerRunTime
-        m_MethodName: SetMousePositon
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_joystickValue: {x: 0, y: 0}
-  m_onValueChangedX:
-    m_PersistentCalls:
-      m_Calls: []
-  m_onValueChangedY:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &1832972775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832972773}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.56768, y: 3.91327, z: 4.01968}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1414,5 +1297,4 @@ SceneRoots:
   - {fileID: 150741064}
   - {fileID: 902435142}
   - {fileID: 1647325688}
-  - {fileID: 1832972775}
   - {fileID: 524623383}
