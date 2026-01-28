@@ -59,42 +59,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "ChoiceJump",
-                    "type": "Button",
-                    "id": "fc3e9100-49bd-4736-a9e0-9d9bae42a629",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ChoiceAttack",
-                    "type": "Button",
-                    "id": "c2515f35-43a0-484b-a42a-2edd2c2c398a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ChoiceScale",
-                    "type": "Button",
-                    "id": "513f178b-69b6-4c7a-97f9-0e3cd4eb4309",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "ChoicePlane",
-                    "type": "Button",
-                    "id": "87bbab99-982c-44a5-8acb-4f9a9781edb7",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -282,6 +246,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ChoicePlane",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eaaaa09f-450e-44e3-9253-9b601e10b006",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseTarget",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
