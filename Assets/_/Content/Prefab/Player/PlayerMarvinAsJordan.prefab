@@ -1,5 +1,139 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &995107245223962055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8945235070725080720}
+  - component: {fileID: 5868577331117116361}
+  m_Layer: 6
+  m_Name: ChoiceJump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8945235070725080720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995107245223962055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3640256254677466359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5868577331117116361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995107245223962055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: 8314749971607558796, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2152286611980322434}
+        m_TargetAssemblyTypeName: PlayerRunTime.Player, PlayerRunTime
+        m_MethodName: OnJumpSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
+--- !u!1 &1131227328301902048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4529559585215591388}
+  - component: {fileID: 2989686827777678515}
+  m_Layer: 6
+  m_Name: ChoicePlane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4529559585215591388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131227328301902048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3640256254677466359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2989686827777678515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131227328301902048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: 5482092567014230275, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2152286611980322434}
+        m_TargetAssemblyTypeName: PlayerRunTime.Player, PlayerRunTime
+        m_MethodName: OnPlaneSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1 &2704671263797385093
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 24388151689863706}
   - component: {fileID: 7798156920424585690}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Resart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +178,175 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99d1ef66d22e2b448d09c3ea1743abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: LevelDesignScript::LevelDesignScript.RestartLevel
+--- !u!1 &3799734105113642440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3740645782893498162}
+  - component: {fileID: 2399112176151517236}
+  m_Layer: 6
+  m_Name: ChoiceAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3740645782893498162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799734105113642440}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3640256254677466359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2399112176151517236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799734105113642440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: -4943180167681335429, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2152286611980322434}
+        m_TargetAssemblyTypeName: PlayerRunTime.Player, PlayerRunTime
+        m_MethodName: OnAttackSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
+--- !u!1 &5229328754021048269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3640256254677466359}
+  m_Layer: 6
+  m_Name: ChoiceSkillsButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3640256254677466359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229328754021048269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8945235070725080720}
+  - {fileID: 3740645782893498162}
+  - {fileID: 1659612476635601132}
+  - {fileID: 4529559585215591388}
+  m_Father: {fileID: 8214871773047491949}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6038871431862182726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659612476635601132}
+  - component: {fileID: 453156408853708934}
+  m_Layer: 6
+  m_Name: ChoiceScale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659612476635601132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038871431862182726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3640256254677466359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453156408853708934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038871431862182726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: -6949793698430928324, guid: 73b5bc5315eeb0341885002bd477833a, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2152286611980322434}
+        m_TargetAssemblyTypeName: PlayerRunTime.Player, PlayerRunTime
+        m_MethodName: OnScaleSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1001 &2356585067704034972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,17 +355,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2775219244774742408, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933574888527543957, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3027344426710015778, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.9
+      value: -14.9
       objectReference: {fileID: 0}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.13
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 8.65
       objectReference: {fileID: 0}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalRotation.w
@@ -93,6 +408,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: _jumpForce
       value: 10
       objectReference: {fileID: 0}
@@ -115,7 +434,7 @@ PrefabInstance:
     - target: {fileID: 5404674970657511222, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2063426758006612015}
+      objectReference: {fileID: 2162288568891448578}
     - target: {fileID: 5404674970657511222, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -126,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5404674970657511222, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerRunTime.Autorun, PlayerRunTime
+      value: PlayerRunTime.Jumps, PlayerRunTime
       objectReference: {fileID: 0}
     - target: {fileID: 5404674970657511222, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -136,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerMarvinAsJordan
       objectReference: {fileID: 0}
+    - target: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5470413987743359451, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -144,13 +467,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6927814403425477664, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6945288006702119813, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       insertIndex: -1
       addedObject: {fileID: 24388151689863706}
+    - targetCorrespondingSourceObject: {fileID: 5959762007864126449, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3640256254677466359}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      insertIndex: 5
+      addedObject: {fileID: 2152286611980322434}
+    - targetCorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 6879258737228935938}
     - targetCorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6786013660868377928}
@@ -163,22 +503,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
   m_PrefabInstance: {fileID: 2356585067704034972}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2063426758006612015 stripped
+--- !u!114 &2162288568891448578 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4329795521087014579, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4518720512348961694, guid: 027c5b2350f62244b98026d80d896031, type: 3}
   m_PrefabInstance: {fileID: 2356585067704034972}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7736433732589211777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7f63e256fffafd4bb0fbd65606a0f0b, type: 3}
+  m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Autorun
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
+--- !u!114 &5282408068374224650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7636600306648185238, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+  m_PrefabInstance: {fileID: 2356585067704034972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736433732589211777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d8f4598eb43de439719b948a0044c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Scale
+--- !u!114 &6565077820007923427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8912503662708988031, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+  m_PrefabInstance: {fileID: 2356585067704034972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736433732589211777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
 --- !u!1 &7736433732589211777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5469921775203218973, guid: 027c5b2350f62244b98026d80d896031, type: 3}
   m_PrefabInstance: {fileID: 2356585067704034972}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2152286611980322434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736433732589211777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9315c8d1d1524f9e8f52a6f223e17543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Player
+  _skillsList: 000000000200000003000000
+  _skillScripts:
+  - {fileID: 2162288568891448578}
+  - {fileID: 6565077820007923427}
+  - {fileID: 5282408068374224650}
+--- !u!114 &6879258737228935938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736433732589211777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c592193b2b345199a7bf40d17d44b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.SkillSwitch
 --- !u!114 &6786013660868377928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,3 +636,8 @@ MonoBehaviour:
     m_Bits: 524288
   m_useCollision: 1
   m_useTrigger: 1
+--- !u!4 &8214871773047491949 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5959762007864126449, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+  m_PrefabInstance: {fileID: 2356585067704034972}
+  m_PrefabAsset: {fileID: 0}

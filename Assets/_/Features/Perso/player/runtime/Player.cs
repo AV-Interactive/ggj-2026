@@ -33,28 +33,35 @@ namespace PlayerRunTime
             DisableAllSkills();
         }
 
-        void Update()
-        {
-            // Test de switch entre sorts
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                DisableAllSkills();
-                if (_indexSkill == _skillsList.Count)
-                {
-                    _indexSkill = 0;
-                }
-                EnemyEvents.RaiseChangeSkill(_skillsList[_indexSkill]);
-                _skillScripts[_indexSkill].enabled = true;
-                _indexSkill++;
-            }
-        }
-
         #endregion
 
 
         #region Main Methods
 
-        // 
+        public void OnJumpSelected()
+        {
+            Debug.Log("Jump");
+            _skillSelected = EnumSkill.Jump;
+            UpdateSkill(_skillSelected);
+        }
+
+        public void OnAttackSelected()
+        {
+            _skillSelected = EnumSkill.Attack;
+            UpdateSkill(_skillSelected);
+        }
+
+        public void OnPlaneSelected()
+        {
+            _skillSelected = EnumSkill.Plane;
+            UpdateSkill(_skillSelected);
+        }
+
+        public void OnScaleSelected()
+        {
+            _skillSelected = EnumSkill.Scale;
+            UpdateSkill(_skillSelected);
+        }
 
         #endregion
 
@@ -76,6 +83,14 @@ namespace PlayerRunTime
             }
         }
 
+        void UpdateSkill(EnumSkill skill)
+        {
+            DisableAllSkills();
+            Debug.Log($"On choisis le skill = {_skillSelected}");
+            EnemyEvents.RaiseChangeSkill(_skillsList[(int)skill]);
+            _skillScripts[(int)skill].enabled = true;
+        }
+
         #endregion
 
 
@@ -86,6 +101,7 @@ namespace PlayerRunTime
         [SerializeField] List<MonoBehaviour> _skillScripts = new List<MonoBehaviour>();
         
         int _indexSkill = 0;
+        EnumSkill _skillSelected;
 
         #endregion
     }

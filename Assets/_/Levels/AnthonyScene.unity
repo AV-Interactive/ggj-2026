@@ -212,18 +212,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 448049412768104212, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 577133050577393673, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 772099146754701758, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1196948179156020014, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.9
@@ -266,111 +254,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063426758006612015, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2704671263797385093, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
+    - target: {fileID: 5868577331117116361, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1478279706}
+    - target: {fileID: 5868577331117116361, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnJumpSelected
       objectReference: {fileID: 0}
-    - target: {fileID: 4652446961180312252, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4672162485837471001, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
+    - target: {fileID: 5868577331117116361, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerRunTime.Player, PlayerRunTime
       objectReference: {fileID: 0}
     - target: {fileID: 7736433732589211777, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_Name
       value: PlayerMarvinAsJordan
       objectReference: {fileID: 0}
-    - target: {fileID: 7736433732589211777, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7736433732589211777, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1478279706}
-    - targetCorrespondingSourceObject: {fileID: 7736433732589211777, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1478279707}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3062abebb13faa49a57405445a4447a, type: 3}
---- !u!1 &1478279694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7736433732589211777, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-  m_PrefabInstance: {fileID: 1033853742}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1478279697 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5282408068374224650, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-  m_PrefabInstance: {fileID: 1033853742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478279694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68d8f4598eb43de439719b948a0044c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Scale
---- !u!114 &1478279698 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2162288568891448578, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-  m_PrefabInstance: {fileID: 1033853742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478279694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d93e95fbd971ff146b293e3ede974824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Jump.Jump
---- !u!114 &1478279700 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6565077820007923427, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-  m_PrefabInstance: {fileID: 1033853742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478279694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d304cdc69ec4834d93a5beb63b38082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Planneur
 --- !u!4 &1478279705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1196948179156020014, guid: c3062abebb13faa49a57405445a4447a, type: 3}
   m_PrefabInstance: {fileID: 1033853742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1478279706
+--- !u!114 &1478279706 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2152286611980322434, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+  m_PrefabInstance: {fileID: 1033853742}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478279694}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9315c8d1d1524f9e8f52a6f223e17543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Player
-  _skillsList: 000000000200000003000000
-  _skillScripts:
-  - {fileID: 1478279698}
-  - {fileID: 1478279700}
-  - {fileID: 1478279697}
---- !u!114 &1478279707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478279694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c592193b2b345199a7bf40d17d44b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.SkillSwitch
 --- !u!1 &1689886004
 GameObject:
   m_ObjectHideFlags: 0
