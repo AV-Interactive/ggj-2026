@@ -92,11 +92,11 @@ namespace PlayerRunTime
 
         void UpdateSkill(EnumSkill skill)
         {
+            int skillIndex = (int)skill;
             DisableAllSkills();
             EnemyEvents.RaiseChangeSkill(skill);
-            _skillScripts[(int)skill].enabled = true;
-            int skillI = (int)skill;
-            Debug.Log($"SkillName : {skill}, index : {skillI.ToString()}");
+            _skillScripts[skillIndex].enabled = true;
+            Debug.Log($"SkillName : {skill}, index : {skillIndex.ToString()}");
         }
 
         #endregion
