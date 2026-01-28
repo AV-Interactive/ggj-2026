@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Enemy.Runtime
 {
@@ -14,19 +10,36 @@ namespace Enemy.Runtime
     
     public class Enemy : MonoBehaviour
     {
-
         #region Publics
-
         //
-
         #endregion
 
-
         #region Unity
+
+        void Awake()
+        {
+            _maxGoalPoints = _goalPoints.Length;
+        }
+
+        void Start()
+        {
+            if (_goalPoints.Length > 0)
+            {
+                LookAtTarget(_goalPoints[_indexGoalPoint].transform.position);
+            }
+        }
 
         void FixedUpdate()
         {
             transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+            
+            if (_goalPoints.Length == 0) return;
+
+            Vector3 targetPosition = _goalPoints[_indexGoalPoint].transform.position;
+            
+            //targetPosition.y = transform.position.y;
+            
+            transform.LookAt(targetPosition);
         }
 
         void OnCollisionEnter(Collision other)
@@ -34,40 +47,43 @@ namespace Enemy.Runtime
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 EventsRuntime.EnemyEvents.RaiseHit(gameObject);
+                Debug.Log(gameObject.name + " hit");
             }
         }
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject == _GPPRight.gameObject)
+            if (other.gameObject == _goalPoints[_indexGoalPoint])
             {
-                transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            }
-
-            if (other.gameObject == _GPPLeft.gameObject)
-            {
-                transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                GoToNextPoint();
             }
         }
 
         #endregion
 
-
         #region Main Methods
 
-        // 
+        void GoToNextPoint()
+        {
+            _indexGoalPoint++;
+
+            if (_indexGoalPoint >= _goalPoints.Length)
+            {
+                _indexGoalPoint = 0;
+            }
+
+            Vector3 nextPosition = _goalPoints[_indexGoalPoint].transform.position;
+            
+            LookAtTarget(nextPosition);
+        }
+
+        void LookAtTarget(Vector3 target)
+        {
+            //target.y = transform.position.y;
+            transform.LookAt(target);
+        }
 
         #endregion
-
-
-        #region Utils
-
-        //
-
-        float _currentX;
-
-        #endregion
-
 
         #region Privates and Protected
 
@@ -76,18 +92,12 @@ namespace Enemy.Runtime
         [SerializeField] EnemyType  _type;
         [SerializeField] float _speed = 10f;
         
-        //[Header("Target")]
-        //[SerializeField] GameObject _target;
-        
         [Header("Goal Patrol Points")]
-        [SerializeField] GameObject _GPPLeft;
-        [SerializeField] GameObject _GPPRight;
-        [SerializeField] GameObject _GPPUp;
-        [SerializeField] GameObject _GPPDown;
+        [SerializeField] GameObject[] _goalPoints;
         
-        UnityEvent<GameObject> _collisionEvent = new UnityEvent<GameObject>();
+        int _indexGoalPoint = 0;
+        int _maxGoalPoints;
 
         #endregion
     }
 }
-
