@@ -40,6 +40,7 @@ namespace PlayerRunTime
 
         public void OnJumpSelected()
         {
+            if(_skillSelected == EnumSkill.Jump) return;
             Debug.Log("Jump");
             _skillSelected = EnumSkill.Jump;
             UpdateSkill(_skillSelected);
@@ -47,18 +48,24 @@ namespace PlayerRunTime
 
         public void OnAttackSelected()
         {
+            if(_skillSelected == EnumSkill.Attack) return;
+            Debug.Log("Atk");
             _skillSelected = EnumSkill.Attack;
             UpdateSkill(_skillSelected);
         }
 
         public void OnPlaneSelected()
         {
+            if (_skillSelected == EnumSkill.Plane) return;
+            Debug.Log("Plane");
             _skillSelected = EnumSkill.Plane;
             UpdateSkill(_skillSelected);
         }
 
         public void OnScaleSelected()
         {
+            if(_skillSelected == EnumSkill.Scale) return;
+            Debug.Log("Scale");
             _skillSelected = EnumSkill.Scale;
             UpdateSkill(_skillSelected);
         }
@@ -86,9 +93,10 @@ namespace PlayerRunTime
         void UpdateSkill(EnumSkill skill)
         {
             DisableAllSkills();
-            Debug.Log($"On choisis le skill = {_skillSelected}");
-            EnemyEvents.RaiseChangeSkill(_skillsList[(int)skill]);
+            EnemyEvents.RaiseChangeSkill(skill);
             _skillScripts[(int)skill].enabled = true;
+            int skillI = (int)skill;
+            Debug.Log($"SkillName : {skill}, index : {skillI.ToString()}");
         }
 
         #endregion
@@ -97,7 +105,7 @@ namespace PlayerRunTime
         #region Privates and Protected
 
         // Variables privées
-        [SerializeField] List<EnumSkill> _skillsList = new List<EnumSkill>();
+        //[SerializeField] List<EnumSkill> _skillsList = new List<EnumSkill>();
         [SerializeField] List<MonoBehaviour> _skillScripts = new List<MonoBehaviour>();
         
         int _indexSkill = 0;

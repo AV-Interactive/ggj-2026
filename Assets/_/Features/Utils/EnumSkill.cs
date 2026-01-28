@@ -4,7 +4,7 @@ namespace PlayerRunTime
     {
         Jump,
         Attack,
+        Scale,
         Plane,
-        Scale
     }
 }
