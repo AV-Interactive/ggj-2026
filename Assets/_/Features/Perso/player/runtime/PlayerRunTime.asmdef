@@ -2,7 +2,8 @@
     "name": "PlayerRunTime",
     "rootNamespace": "PlayerRunTime",
     "references": [
-        "GUID:898b06506281c41e894a78c599c2099d"
+        "GUID:898b06506281c41e894a78c599c2099d",
+        "GUID:c411e955a830a442a9c4896b02cb6825"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
