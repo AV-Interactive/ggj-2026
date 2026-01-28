@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "InputMaskMapping",
+    "name": "InputMaskMappingSave",
     "maps": [
         {
             "name": "MaskDefault",
