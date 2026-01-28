@@ -6,6 +6,9 @@ public class CliffPointTag : MonoBehaviour
 {
     public static readonly List<CliffPointTag> InGameCliffPoints = new();
 
+    
+
+
     private void OnEnable()
     {
         if (!InGameCliffPoints.Contains(this))
@@ -27,12 +30,12 @@ public class CliffPointTag : MonoBehaviour
     {
         float xPlayer = pointToCheck.position.x;
 
-        CliffPointTag closest = InGameCliffPoints
+        List<CliffPointTag> closest = InGameCliffPoints
             .Where(p => p.transform.position.x < xPlayer)
-            .OrderByDescending(p => p.transform.position.x)
-            .FirstOrDefault();
+            .OrderByDescending(p => p.transform.position.x).ToList();
 
-        found = closest != null;
-        point = found ? closest.transform : null;
+        found = closest.Count>0;
+        point = closest.Count > 0 ? closest[0].transform : null;
+
     }
 }
