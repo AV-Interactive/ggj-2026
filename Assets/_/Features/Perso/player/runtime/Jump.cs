@@ -33,7 +33,7 @@ namespace PlayerRunTime
         #endregion
 
         #region Main Methods
-        private void OnJump(bool isJumping)
+        public void OnJump(bool isJumping)
         {
             Jump();
         }
