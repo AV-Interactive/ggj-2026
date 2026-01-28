@@ -6,6 +6,9 @@ public class CliffPointTag : MonoBehaviour
 {
     public static readonly List<CliffPointTag> InGameCliffPoints = new();
 
+    
+
+
     private void OnEnable()
     {
         if (!InGameCliffPoints.Contains(this))
