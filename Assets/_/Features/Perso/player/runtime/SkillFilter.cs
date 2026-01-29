@@ -54,21 +54,25 @@ namespace PlayerRunTime
 
         public void ActivateJump(bool isActive)
         {
+            DeactivateAllMasks();
             CanJump = isActive;
         }
         
         public void ActivateAttack(bool isActive)
         {
+            DeactivateAllMasks();
             CanAttack =  isActive;
         }
         
         public void ActivateScale(bool isActive)
         {
+            DeactivateAllMasks();
             CanScale = isActive;
         }
         
         public void ActivatePlane(bool isActive)
         {
+            DeactivateAllMasks();
             CanPlane = isActive;
         }
 
