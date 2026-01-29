@@ -246,63 +246,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1001 &1353322536
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.22495107
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9743701
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 154
-      objectReference: {fileID: 0}
-    - target: {fileID: 267185568127923685, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6775854780114421577, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
-      propertyPath: m_Name
-      value: SmokeTube (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 50c9b3b1e2bfc29439b6c8451998e707, type: 3}
 --- !u!1001 &1378293874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756198516263950864, guid: 5cbd0c8964c84214aa302ed62960635c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.58
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 5756198516263950864, guid: 5cbd0c8964c84214aa302ed62960635c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -640,6 +583,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_Orbs
       objectReference: {fileID: 0}
+    - target: {fileID: 4287026956597356529, guid: 0d733fdb1eb3e204d80f46533155cfad, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287026956597356529, guid: 0d733fdb1eb3e204d80f46533155cfad, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
+      value: Duration
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287026956597356529, guid: 0d733fdb1eb3e204d80f46533155cfad, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287026956597356529, guid: 0d733fdb1eb3e204d80f46533155cfad, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -651,7 +610,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 574430984}
   - {fileID: 1709910538448928093}
-  - {fileID: 1353322536}
   - {fileID: 1896015025362802437}
   - {fileID: 329539832315719648}
   - {fileID: 3351668460061163502}
