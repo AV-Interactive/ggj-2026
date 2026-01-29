@@ -1,0 +1,14 @@
+{
+    "name": "EventsRuntime",
+    "rootNamespace": "EventsRuntime",
+    "references": ["GUID:c411e955a830a442a9c4896b02cb6825"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
