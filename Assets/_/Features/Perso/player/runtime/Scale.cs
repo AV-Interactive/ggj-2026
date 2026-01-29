@@ -17,6 +17,25 @@ namespace PlayerRunTime
         #endregion
 
         #region Unity API
+        private void OnEnable()
+        {
+            _hasScaledUp = false;
+            _hasScaledDown = false;
+            OnScaleDown(true);
+        }
+
+        private void OnDisable()
+        {
+            if (_scaleTransform != null)
+            {
+                _scaleTransform.localScale = Vector3.one;
+            }
+            _hasScaledDown = false;
+            _hasScaledUp = false;
+            _isScalingDown = false;
+            _isScalingUp = false;
+        }
+
         private void Update()
         {
             ResetIfBothActionsCompleted();
