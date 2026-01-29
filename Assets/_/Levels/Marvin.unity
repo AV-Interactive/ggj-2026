@@ -814,6 +814,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 447246247548563695, guid: 027c5b2350f62244b98026d80d896031, type: 3}
+      propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1267197572}
     - target: {fileID: 3470075897973312946, guid: 027c5b2350f62244b98026d80d896031, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.44
@@ -869,51 +873,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8035961523803605349, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1225696709}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 027c5b2350f62244b98026d80d896031, type: 3}
---- !u!1 &1225696707 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8035961523803605349, guid: 027c5b2350f62244b98026d80d896031, type: 3}
-  m_PrefabInstance: {fileID: 902435142}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1225696709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225696707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
-  m_inputAction: {fileID: 1766534375238291440, guid: 81c8f7c57c9ade5429b24876f8828681, type: 3}
-  m_onChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1267197572}
-        m_TargetAssemblyTypeName: PlayerRunTime.PauseManager, PlayerRunTime
-        m_MethodName: PauseGame
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_onDown:
-    m_PersistentCalls:
-      m_Calls: []
-  m_onUp:
-    m_PersistentCalls:
-      m_Calls: []
-  m_isPressed: 0
 --- !u!114 &1267197572 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8061300456313094169, guid: 0039d157cd4376b40a957afdd167fd89, type: 3}
@@ -1494,6 +1455,10 @@ PrefabInstance:
     - target: {fileID: 1360642657377488562, guid: fc34edd24df833c49ab9f19d2f4eeeec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036165976875706382, guid: fc34edd24df833c49ab9f19d2f4eeeec, type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6728344971592386444, guid: fc34edd24df833c49ab9f19d2f4eeeec, type: 3}
       propertyPath: m_Name
