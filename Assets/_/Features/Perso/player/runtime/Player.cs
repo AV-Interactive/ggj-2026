@@ -30,6 +30,7 @@ namespace PlayerRunTime
 
         void Awake()
         {
+            _skillSelected = EnumSkill.None;
             DisableAllSkills();
         }
 
@@ -38,35 +39,21 @@ namespace PlayerRunTime
 
         #region Main Methods
 
-        public void OnJumpSelected()
-        {
-            if(_skillSelected == EnumSkill.Jump) return;
-            Debug.Log("Jump");
-            _skillSelected = EnumSkill.Jump;
-            UpdateSkill(_skillSelected);
-        }
+        public void OnJumpSelected() => SetSkill(EnumSkill.Jump);
+        public void OnAttackSelected() => SetSkill(EnumSkill.Attack);
+        public void OnPlaneSelected() => SetSkill(EnumSkill.Plane);
+        public void OnScaleSelected() => SetSkill(EnumSkill.Scale);
 
-        public void OnAttackSelected()
+        private void SetSkill(EnumSkill skill)
         {
-            if(_skillSelected == EnumSkill.Attack) return;
-            Debug.Log("Atk");
-            _skillSelected = EnumSkill.Attack;
-            UpdateSkill(_skillSelected);
-        }
+            if (_skillSelected == skill)
+            {
+                Debug.Log($"[Player] Skill {skill} déjà sélectionné.");
+                return;
+            }
 
-        public void OnPlaneSelected()
-        {
-            if (_skillSelected == EnumSkill.Plane) return;
-            Debug.Log("Plane");
-            _skillSelected = EnumSkill.Plane;
-            UpdateSkill(_skillSelected);
-        }
-
-        public void OnScaleSelected()
-        {
-            if(_skillSelected == EnumSkill.Scale) return;
-            Debug.Log("Scale");
-            _skillSelected = EnumSkill.Scale;
+            Debug.Log($"[Player] Sélection du skill : {skill}");
+            _skillSelected = skill;
             UpdateSkill(_skillSelected);
         }
 
@@ -84,20 +71,34 @@ namespace PlayerRunTime
 
         void DisableAllSkills()
         {
-            foreach (var script in _skillScripts)
+            if (_skillScripts == null) return;
+
+            foreach (var config in _skillScripts)
             {
-                script.Script.enabled = false;
+                if (config != null && config.Script != null)
+                {
+                    config.Script.enabled = false;
+                }
             }
         }
 
         void UpdateSkill(EnumSkill skill)
         {
-            var script = _skillScripts.Find(s => s.Skill == skill);
+            DisableAllSkills();
+
+            if (skill == EnumSkill.None) return;
+
+            var config = _skillScripts.Find(s => s.Skill == skill);
             
-            if(script != null && script.Script != null)
+            if (config != null && config.Script != null)
             {
-                script.Script.enabled = true;
+                config.Script.enabled = true;
                 EnemyEvents.RaiseChangeSkill(skill);
+                Debug.Log($"[Player] Skill switché vers : {skill}");
+            }
+            else
+            {
+                Debug.LogWarning($"[Player] Impossible de trouver le script pour le skill : {skill}");
             }
         }
 

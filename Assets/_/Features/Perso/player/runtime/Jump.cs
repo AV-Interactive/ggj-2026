@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace PlayerRunTime
@@ -11,6 +12,17 @@ namespace PlayerRunTime
         #endregion
 
         #region Unity API
+
+        void OnEnable()
+        {
+            _canJump = true;
+        }
+
+        void OnDisable()
+        {
+            _canJump = false;
+        }
+
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -35,11 +47,13 @@ namespace PlayerRunTime
         #region Main Methods
         public void OnJump(bool isJumping)
         {
+            if (!_canJump) return;
             Jump();
         }
 
         public void Jump()
         {
+            if (!_canJump) return;
             if (_characterController.isGrounded)
             {
                 _autorun.SetVelocityY(_jumpForce);
@@ -52,7 +66,10 @@ namespace PlayerRunTime
         #endregion
 
         #region Privates and Protected
+        
         // Variables privées
+        bool _canJump = false;
+
         #endregion
     }
 }
