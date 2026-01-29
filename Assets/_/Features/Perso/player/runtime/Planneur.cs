@@ -14,6 +14,17 @@ namespace PlayerRunTime
         #endregion
 
         #region Unity API
+
+        void OnEnable()
+        {
+            _canPlan = true;
+        }
+
+        void OnDisable()
+        {
+            _canPlan = false;
+        }
+
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -64,6 +75,7 @@ namespace PlayerRunTime
 
         public void SetGliderActive(bool isActive)
         {
+            if (_canPlan) return;
             _isGliderActive = true;
         }
 
@@ -81,7 +93,9 @@ namespace PlayerRunTime
         #endregion
 
         #region Privates and Protected
-        // Variables privées
+
+        bool _canPlan = false; 
+
         #endregion
     }
 }
