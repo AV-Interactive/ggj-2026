@@ -9170,6 +9170,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4274766336955249692, guid: 60f82219ad2637d4285fd19a6ef8ba44, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4531622841391021476, guid: 60f82219ad2637d4285fd19a6ef8ba44, type: 3}
       propertyPath: m_Name
       value: TeamLevel
