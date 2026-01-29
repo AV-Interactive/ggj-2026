@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_/Levels/MainMenu.unity
+    guid: 0056572e51b983040850e4dff1eca250
+  - enabled: 1
     path: Assets/_/Levels/Marvin.unity
     guid: 36e5909aa54c51744a5696cb9cfc771b
   m_configObjects:

@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PlayerRunTime
 {
-    public class UIManager : MonoBehaviour
+    public class MainMenuManager : MonoBehaviour
     {
+
         #region Publics
 
-        bool _onPause;       
+        //
 
         #endregion
+
 
         #region Unity API
 
@@ -16,17 +19,29 @@ namespace PlayerRunTime
 
         #endregion
 
+
         #region Main Methods
 
-        // 
+        public void QuitGame (bool Quit)
+        {
+            Application.Quit();
+        }
+
+        public void LoadGame (string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
+            Time.timeScale = 1f;
+        }
 
         #endregion
+
 
         #region Utils
 
         /* Fonctions privées utiles */
 
         #endregion
+
 
         #region Privates and Protected
 
