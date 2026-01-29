@@ -9,9 +9,7 @@ namespace PlayerRunTime
         [SerializeField] private GameObject _projectilPrefab;
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Camera _camera;
-        [SerializeField] private float _maxDistance = 100f;
         [SerializeField] private Vector2 _mousePosition ;
-
 
         #endregion
 
