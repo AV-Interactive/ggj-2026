@@ -78,6 +78,7 @@ namespace PlayerRunTime
                 if (config != null && config.Script != null)
                 {
                     config.Script.enabled = false;
+                    config.MaskModel.SetActive(false);
                 }
             }
         }
@@ -93,6 +94,7 @@ namespace PlayerRunTime
             if (config != null && config.Script != null)
             {
                 config.Script.enabled = true;
+                config.MaskModel.SetActive(true);
                 EnemyEvents.RaiseChangeSkill(skill);
                 Debug.Log($"[Player] Skill switché vers : {skill}");
             }
@@ -121,6 +123,7 @@ namespace PlayerRunTime
     {
         public EnumSkill Skill;
         public MonoBehaviour Script;
+        public GameObject MaskModel;
     }
 }
 
