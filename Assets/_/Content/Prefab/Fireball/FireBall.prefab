@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce1f594c81e9d14e89bb04c06381e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.Projectil
-  _speed: 10
+  _speed: 20
   _rigidbody: {fileID: 147686941472983770}
   _lifeTime: 5
   _enemyLayer:
