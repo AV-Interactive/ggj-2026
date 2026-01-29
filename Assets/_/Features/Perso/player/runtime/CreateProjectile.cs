@@ -5,6 +5,7 @@ namespace PlayerRunTime
     public class CreateProjectile : MonoBehaviour
     {
         #region Publics
+
         [SerializeField] private GameObject _projectilPrefab;
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Camera _camera;
@@ -43,7 +44,11 @@ namespace PlayerRunTime
 
         public void OnShoot(bool shootAction)
         {
-            Shoot();
+            if(this.enabled)
+            {
+                if (shootAction)
+                Shoot();
+            }
         }
 
         private void Shoot()
@@ -71,13 +76,35 @@ namespace PlayerRunTime
 
         private Vector3 GetMouseWorldDirection()
         {
+            // Créer un plan au niveau Z=0 (le plan de jeu)
+            Plane gamePlane = new Plane(Vector3.forward, Vector3.zero);
+
+            // Créer un ray depuis la caméra vers la position de la souris
             Ray ray = _camera.ScreenPointToRay(_mousePosition);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, _maxDistance))
+            // Trouver l'intersection entre le ray et le plan
+            if (gamePlane.Raycast(ray, out float distance))
             {
-                return (hit.point - _firePoint.position).normalized;
+                // Point d'intersection sur le plan Z=0
+                Vector3 mouseWorldPos = ray.GetPoint(distance);
+                mouseWorldPos.z = 0f; // Forcer Z à 0 pour être sûr
+
+                // Position du joueur
+                Vector3 playerPos = _firePoint.position;
+                playerPos.z = 0f;
+
+                // Direction
+                Vector3 direction = (mouseWorldPos - playerPos).normalized;
+
+                // Debug
+                Debug.DrawLine(playerPos, mouseWorldPos, Color.red, 2f);
+                Debug.DrawRay(playerPos, direction * 3f, Color.green, 2f);
+
+                return direction;
             }
 
+            // Fallback au cas où le raycast échoue (ne devrait jamais arriver)
+            Debug.LogWarning("Raycast sur le plan a échoué!");
             return _firePoint.forward;
         }
         #endregion
