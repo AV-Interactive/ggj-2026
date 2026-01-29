@@ -14,6 +14,7 @@ namespace PlayerRunTime
         [SerializeField] private bool _scaleDownAction;
         [SerializeField] private bool _scaleUpAction;
         [SerializeField] private LayerMask _obstacleLayer;
+        [SerializeField] private AudioClip _scaleSound;
         #endregion
 
         #region Unity API
@@ -48,6 +49,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledDown)
             {
+                AudioManager.Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingDown, ref _isScalingUp);
             }
         }
@@ -56,6 +58,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledUp)
             {
+                AudioManager.Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingUp, ref _isScalingDown);
             }
         }

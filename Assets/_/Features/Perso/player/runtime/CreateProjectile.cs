@@ -9,9 +9,8 @@ namespace PlayerRunTime
         [SerializeField] private GameObject _projectilPrefab;
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Camera _camera;
-        [SerializeField] private float _maxDistance = 100f;
-        [SerializeField] private Vector2 _mousePosition ;
-
+        [SerializeField] private Vector2 _mousePosition;
+        [SerializeField] private AudioClip _shootSound;
 
         #endregion
 
@@ -53,24 +52,16 @@ namespace PlayerRunTime
 
         private void Shoot()
         {
-            // Détruire le projectile existant s'il y en a un
             if (_currentProjectil != null)
-            {
                 Destroy(_currentProjectil);
-            }
 
-            // Créer un nouveau projectile
             if (_projectilPrefab != null)
             {
-                // Calculer la direction vers la souris
+                AudioManager.Instance.PlaySFX(_shootSound); // 🔊 ICI
+
                 Vector3 mouseDirection = GetMouseWorldDirection();
                 Quaternion rotation = Quaternion.LookRotation(mouseDirection);
-
                 _currentProjectil = Instantiate(_projectilPrefab, _firePoint.position, rotation);
-            }
-            else
-            {
-                Debug.LogWarning("Projectil Prefab non assigné !");
             }
         }
 
