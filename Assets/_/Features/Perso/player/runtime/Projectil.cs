@@ -10,6 +10,7 @@ namespace PlayerRunTime
         [SerializeField] private float _lifeTime = 5f;
         [SerializeField] private LayerMask _enemyLayer;
         [SerializeField] private GameObject _explosionVFXPrefab;
+        [SerializeField] private AudioClip _hitSound;
         #endregion
 
         #region Unity API
@@ -29,6 +30,8 @@ namespace PlayerRunTime
 
         private void OnCollisionEnter(Collision collision)
         {
+            AudioManager.Instance.PlaySFX(_hitSound);
+
             // Instancier l'explosion à la position de la collision
             if (_explosionVFXPrefab != null)
             {
