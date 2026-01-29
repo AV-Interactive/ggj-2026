@@ -9,6 +9,8 @@ namespace PlayerRunTime
         [SerializeField] private float _jumpForce = 5f;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Autorun _autorun;
+
+        [SerializeField] private AudioClip _jumpSound;
         #endregion
 
         #region Unity API
@@ -56,6 +58,7 @@ namespace PlayerRunTime
             if (!_canJump) return;
             if (_characterController.isGrounded)
             {
+                AudioManager.Instance.PlaySFX(_jumpSound);
                 _autorun.SetVelocityY(_jumpForce);
             }
         }

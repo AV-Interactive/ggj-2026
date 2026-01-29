@@ -11,12 +11,17 @@ namespace PlayerRunTime
 
         #region Publics
 
-        //
+        [SerializeField] private AudioClip _deathSound;
 
         #endregion
 
 
         #region Unity API
+
+        private void OnDestroy()
+        {
+            AudioManager.Instance.PlaySFX(_deathSound);
+        }
 
         void OnEnable()
         {

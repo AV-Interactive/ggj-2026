@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.IO;
 
 namespace PlayerRunTime
@@ -6,6 +6,8 @@ namespace PlayerRunTime
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager Instance;
+
+        [SerializeField] private AudioSource _sfxSource;
 
         private string filePath;
         private float volume = 1f;
@@ -18,7 +20,6 @@ namespace PlayerRunTime
 
         private void Awake()
         {
-            // Singleton
             if (Instance != null)
             {
                 Destroy(gameObject);
@@ -28,12 +29,20 @@ namespace PlayerRunTime
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
+            // Sécurité si oublié dans l’Inspector
+            if (_sfxSource == null)
+            {
+                _sfxSource = gameObject.AddComponent<AudioSource>();
+                _sfxSource.playOnAwake = false;
+            }
+
             filePath = Path.Combine(Application.persistentDataPath, "volume.json");
 
             LoadVolume();
             ApplyVolume();
         }
 
+        // 🎚️ Volume global
         public void SetVolume(float newVolume)
         {
             volume = Mathf.Clamp01(newVolume);
@@ -44,6 +53,13 @@ namespace PlayerRunTime
         void ApplyVolume()
         {
             AudioListener.volume = volume;
+        }
+
+        // 🔊 SFX
+        public void PlaySFX(AudioClip clip)
+        {
+            if (clip == null) return;
+            _sfxSource.PlayOneShot(clip);
         }
 
         void SaveAudio()
