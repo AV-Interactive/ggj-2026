@@ -11,10 +11,6 @@ namespace PlayerRunTime
         [SerializeField] private Planneur _planneur;
         #endregion
 
-        #region Privates and Protected
-        private Vector3 _velocity;
-        #endregion
-
         #region Unity API
         private void Reset()
         {
@@ -81,6 +77,10 @@ namespace PlayerRunTime
 
         #region Utils
         /* Fonctions privées utiles */
+        #endregion
+
+        #region Privates and Protected
+        private Vector3 _velocity;
         #endregion
     }
 }

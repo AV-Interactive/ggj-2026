@@ -11,9 +11,21 @@ namespace PlayerRunTime
         [SerializeField] private float _fallingGravityScale = 2f;
         [SerializeField] private float _glidingGravityScale = 0.1f;
         [SerializeField] private float _fallThreshold = -0.1f;
+        [SerializeField] private AudioClip _planeSound;
         #endregion
 
         #region Unity API
+
+        void OnEnable()
+        {
+            _canPlan = true;
+        }
+
+        void OnDisable()
+        {
+            _canPlan = false;
+        }
+
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -64,6 +76,9 @@ namespace PlayerRunTime
 
         public void SetGliderActive(bool isActive)
         {
+            AudioManager.Instance.PlaySFX(_planeSound);
+
+            if (_canPlan) return;
             _isGliderActive = true;
         }
 
@@ -81,7 +96,9 @@ namespace PlayerRunTime
         #endregion
 
         #region Privates and Protected
-        // Variables privées
+
+        bool _canPlan = false; 
+
         #endregion
     }
 }

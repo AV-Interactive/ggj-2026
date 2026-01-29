@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace PlayerRunTime
@@ -8,9 +9,22 @@ namespace PlayerRunTime
         [SerializeField] private float _jumpForce = 5f;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Autorun _autorun;
+
+        [SerializeField] private AudioClip _jumpSound;
         #endregion
 
         #region Unity API
+
+        void OnEnable()
+        {
+            _canJump = true;
+        }
+
+        void OnDisable()
+        {
+            _canJump = false;
+        }
+
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -33,15 +47,18 @@ namespace PlayerRunTime
         #endregion
 
         #region Main Methods
-        private void OnJump(bool isJumping)
+        public void OnJump(bool isJumping)
         {
+            if (!_canJump) return;
             Jump();
         }
 
         public void Jump()
         {
+            if (!_canJump) return;
             if (_characterController.isGrounded)
             {
+                AudioManager.Instance.PlaySFX(_jumpSound);
                 _autorun.SetVelocityY(_jumpForce);
             }
         }
@@ -52,7 +69,10 @@ namespace PlayerRunTime
         #endregion
 
         #region Privates and Protected
+        
         // Variables privées
+        bool _canJump = false;
+
         #endregion
     }
 }

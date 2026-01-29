@@ -14,9 +14,29 @@ namespace PlayerRunTime
         [SerializeField] private bool _scaleDownAction;
         [SerializeField] private bool _scaleUpAction;
         [SerializeField] private LayerMask _obstacleLayer;
+        [SerializeField] private AudioClip _scaleSound;
         #endregion
 
         #region Unity API
+        private void OnEnable()
+        {
+            _hasScaledUp = false;
+            _hasScaledDown = false;
+            OnScaleDown(true);
+        }
+
+        private void OnDisable()
+        {
+            if (_scaleTransform != null)
+            {
+                _scaleTransform.localScale = Vector3.one;
+            }
+            _hasScaledDown = false;
+            _hasScaledUp = false;
+            _isScalingDown = false;
+            _isScalingUp = false;
+        }
+
         private void Update()
         {
             ResetIfBothActionsCompleted();
@@ -29,6 +49,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledDown)
             {
+                AudioManager.Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingDown, ref _isScalingUp);
             }
         }
@@ -37,6 +58,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledUp)
             {
+                AudioManager.Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingUp, ref _isScalingDown);
             }
         }
