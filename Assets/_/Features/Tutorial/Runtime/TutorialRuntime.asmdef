@@ -1,0 +1,18 @@
+{
+    "name": "TutorialRuntime",
+    "rootNamespace": "TutorialRuntime",
+    "references": [
+        "GUID:898b06506281c41e894a78c599c2099d",
+        "GUID:c411e955a830a442a9c4896b02cb6825",
+        "GUID:a94c5f854dfcd134da0bf602b5d324f9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
