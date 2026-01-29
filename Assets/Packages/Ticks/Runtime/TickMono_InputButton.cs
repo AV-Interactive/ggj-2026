@@ -14,13 +14,17 @@ public class TickMono_InputButton: MonoBehaviour
     public bool m_isPressed;
     void OnEnable()
     {
-        m_inputAction.action.Enable();
+            if (m_inputAction == null) return;
+            if (m_inputAction.action == null) return;
+            m_inputAction.action.Enable();
         m_inputAction.action.performed += ctx => Context(ctx);
         m_inputAction.action.started += ctx => Context(ctx);
         m_inputAction.action.canceled += ctx => Context(ctx);
     }
     private void OnDisable()
     {
+            if (m_inputAction == null) return;
+            if (m_inputAction.action == null) return;
         m_inputAction.action.Disable();
         m_inputAction.action.performed -= ctx => Context(ctx);
         m_inputAction.action.started -= ctx => Context(ctx);

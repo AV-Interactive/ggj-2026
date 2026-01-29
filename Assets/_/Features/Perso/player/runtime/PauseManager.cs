@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 namespace PlayerRunTime
 {
-    public class UIManager : MonoBehaviour
+    public class PauseManager : MonoBehaviour
     {
         #region Publics
 
@@ -40,6 +40,7 @@ namespace PlayerRunTime
 
         public void OnMainMenu(string sceneName)
         {
+
             Time.timeScale = 1f;
             SceneManager.LoadScene(sceneName);
         }
