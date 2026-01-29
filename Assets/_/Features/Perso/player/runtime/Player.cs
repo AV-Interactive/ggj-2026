@@ -44,10 +44,26 @@ namespace PlayerRunTime
 
         #region Main Methods
 
-        public void OnJumpSelected() => SetSkill(EnumSkill.Jump);
-        public void OnAttackSelected() => SetSkill(EnumSkill.Attack);
-        public void OnPlaneSelected() => SetSkill(EnumSkill.Plane);
-        public void OnScaleSelected() => SetSkill(EnumSkill.Scale);
+        public void OnJumpSelected()
+        {
+            if (!SkillFilter.Instance.CanJump) return;
+            SetSkill(EnumSkill.Jump);   
+        }
+        public void OnAttackSelected()
+        {
+            if (!SkillFilter.Instance.CanAttack) return;
+            SetSkill(EnumSkill.Attack);
+        }
+        public void OnPlaneSelected()
+        {
+            if(!SkillFilter.Instance.CanPlane) return;
+            SetSkill(EnumSkill.Plane);
+        }
+        public void OnScaleSelected()
+        {
+            if(!SkillFilter.Instance.CanScale) return;
+            SetSkill(EnumSkill.Scale);
+        }
 
         private void SetSkill(EnumSkill skill)
         {

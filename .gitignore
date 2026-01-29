@@ -99,3 +99,5 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 .vsconfig
 .idea
+Assets/_/Content/Feature/AmbiantSound/SoundDesign/Hit.wav.meta
+.DS_Store
