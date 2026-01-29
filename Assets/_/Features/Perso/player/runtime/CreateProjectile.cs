@@ -2,16 +2,22 @@ using UnityEngine;
 
 namespace PlayerRunTime
 {
-    public class CreatProjectil : MonoBehaviour
+    public class CreateProjectile : MonoBehaviour
     {
         #region Publics
         [SerializeField] private GameObject _projectilPrefab;
         [SerializeField] private Transform _firePoint;
         [SerializeField] private Camera _camera;
         [SerializeField] private float _maxDistance = 100f;
+        [SerializeField] private Vector2 _mousePosition ;
+
+
         #endregion
 
         #region Unity API
+
+
+
         private void Awake()
         {
             // Si pas de firePoint défini, utiliser la position du personnage
@@ -29,6 +35,12 @@ namespace PlayerRunTime
         #endregion
 
         #region Main Methods
+
+        public void SetMousePosition(Vector2 mousePosition)
+        {
+            _mousePosition = mousePosition;
+        }
+
         public void OnShoot(bool shootAction)
         {
             Shoot();
@@ -59,7 +71,7 @@ namespace PlayerRunTime
 
         private Vector3 GetMouseWorldDirection()
         {
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+            Ray ray = _camera.ScreenPointToRay(_mousePosition);
 
             if (Physics.Raycast(ray, out RaycastHit hit, _maxDistance))
             {
