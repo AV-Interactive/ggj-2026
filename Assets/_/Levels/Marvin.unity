@@ -1124,29 +1124,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1267197572}
-    - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerRunTime.UIManager, PlayerRunTime
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4896076374964583400, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5744954565355431555, guid: 63028782eff423949a23ac22be290d72, type: 3}
       propertyPath: m_Name
       value: Canvas_UI_PAUSE
@@ -1155,10 +1135,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1267197572}
-    - target: {fileID: 7557158917722598155, guid: 63028782eff423949a23ac22be290d72, type: 3}
-      propertyPath: m_Name
-      value: Main Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 8064560047375622040, guid: 63028782eff423949a23ac22be290d72, type: 3}
       propertyPath: m_Pivot.x
       value: 0
