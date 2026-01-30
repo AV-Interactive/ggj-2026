@@ -49,7 +49,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledDown)
             {
-                AudioManager.Instance.PlaySFX(_scaleSound);
+                AudioManager._Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingDown, ref _isScalingUp);
             }
         }
@@ -58,7 +58,7 @@ namespace PlayerRunTime
         {
             if (!_hasScaledUp)
             {
-                AudioManager.Instance.PlaySFX(_scaleSound);
+                AudioManager._Instance.PlaySFX(_scaleSound);
                 StartScaling(ref _isScalingUp, ref _isScalingDown);
             }
         }

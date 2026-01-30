@@ -160,6 +160,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 524288
   _explosionVFXPrefab: {fileID: 4294682430745454379, guid: 03729afc4d3ac964986cd4b554757ffa, type: 3}
+  _hitSound: {fileID: 8300000, guid: d9924e1648488c24d843d4bd10a51992, type: 3}
 --- !u!1001 &2589232418809926505
 PrefabInstance:
   m_ObjectHideFlags: 0

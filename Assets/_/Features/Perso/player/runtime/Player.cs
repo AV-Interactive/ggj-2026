@@ -20,7 +20,7 @@ namespace PlayerRunTime
 
         private void OnDestroy()
         {
-            AudioManager.Instance.PlaySFX(_deathSound);
+            AudioManager._Instance.PlaySFX(_deathSound);
         }
 
         void OnEnable()
