@@ -86,8 +86,7 @@ namespace PlayerRunTime
         /* Fonctions privées utiles */
         void TakeDamage(GameObject attacker)
         {
-            Debug.Log($"Attaqué par {attacker.name} !");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         void DisableAllSkills()
