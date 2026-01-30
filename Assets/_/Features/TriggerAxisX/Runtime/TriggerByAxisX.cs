@@ -87,6 +87,11 @@ namespace TriggerByAxis
         {
             DrawLineFor(5);
         }
+        [ContextMenu("Display 30 seconds")]
+        private void Display30Seconds()
+        {
+            DrawLineFor(30);
+        }
         private void DrawLineFor(float timeInSeconds)
         {
             Debug.DrawLine(new Vector3(m_leftPoint.position.x, m_leftPoint.position.y - m_distanceToDrawUp, m_leftPoint.position.z), new Vector3(m_leftPoint.position.x, m_leftPoint.position.y + m_distanceToDrawUp, m_leftPoint.position.z), m_lineColorLeft, timeInSeconds);
