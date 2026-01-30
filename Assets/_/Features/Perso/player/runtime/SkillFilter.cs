@@ -31,11 +31,6 @@ namespace PlayerRunTime
             Instance = this;
         }
 
-        void Start()
-        {
-            if(_activateAll) ActivateAllMask(); else DeactivateAllMasks();
-        }
-
         #endregion
 
 
