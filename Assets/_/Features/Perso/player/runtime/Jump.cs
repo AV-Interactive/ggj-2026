@@ -20,6 +20,10 @@ namespace PlayerRunTime
         void OnDisable()
         {
             _canJump = false;
+            if (_animator != null)
+            {
+                _animator.SetBool("IsJumping", false);
+            }
         }
         private void Reset()
         {
