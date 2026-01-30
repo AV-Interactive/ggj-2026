@@ -13765,6 +13765,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 0ace94a47151c4944af4a2fad784990b, type: 3}
     - target: {fileID: 6565077820007923427, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565077820007923427, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: _fallingGravityScale
       value: 5
       objectReference: {fileID: 0}
