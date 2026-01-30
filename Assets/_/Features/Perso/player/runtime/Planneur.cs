@@ -76,7 +76,7 @@ namespace PlayerRunTime
 
         public void SetGliderActive(bool isActive)
         {
-            AudioManager.Instance.PlaySFX(_planeSound);
+            AudioManager._Instance.PlaySFX(_planeSound);
 
             if (_canPlan) return;
             _isGliderActive = true;
