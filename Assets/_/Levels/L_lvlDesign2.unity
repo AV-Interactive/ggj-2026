@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &18300278 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3956127695220361436, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+  m_PrefabInstance: {fileID: 3983324121102463472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &27604140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13972,9 +13977,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1654673127}
     - target: {fileID: 2162288568891448578, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 18300278}
+    - target: {fileID: 2162288568891448578, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: _jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 245ddc69e5293c142ab2eb066afffdc8, type: 3}
+    - target: {fileID: 2162288568891448578, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2774417161924318835, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_onChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
