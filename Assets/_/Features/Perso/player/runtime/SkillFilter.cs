@@ -31,6 +31,11 @@ namespace PlayerRunTime
             Instance = this;
         }
 
+        void Start()
+        {
+            if(_activateAll) ActivateAllMask(); else DeactivateAllMasks();
+        }
+
         #endregion
 
 
@@ -89,6 +94,7 @@ namespace PlayerRunTime
         #region Privates and Protected
 
         // Variables privées
+        [SerializeField] bool _activateAll = false;
 
         #endregion
     }
