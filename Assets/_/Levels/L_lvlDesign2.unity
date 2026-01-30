@@ -731,7 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 42007135}
   - component: {fileID: 42007136}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -2937,7 +2937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250860016}
   - component: {fileID: 250860017}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -3385,7 +3385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291380046}
   - component: {fileID: 291380047}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -3897,7 +3897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 338655851}
   - component: {fileID: 338655852}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -5406,7 +5406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432504239}
   - component: {fileID: 432504240}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -5459,7 +5459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 450225364}
   - component: {fileID: 450225365}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -7672,7 +7672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689334454}
   - component: {fileID: 689334455}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -7998,7 +7998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733055378}
   - component: {fileID: 733055379}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -8319,9 +8319,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 410274410779827979, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1122712754372999666, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_Name
       value: TUTO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705516265062476160, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.50006104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071205936599023043, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071205936599023043, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00038146973
       objectReference: {fileID: 0}
     - target: {fileID: 2653811162055171902, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8367,9 +8383,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5156291154728319143, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7421077028432984601, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479300520371682670, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479300520371682670, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705015605471116880, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705015605471116880, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000289917
       objectReference: {fileID: 0}
     - target: {fileID: 8310988066518656137, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9670,7 +9706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934999747}
   - component: {fileID: 934999746}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -13564,7 +13600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431296442}
   - component: {fileID: 1431296443}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -15428,7 +15464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1595567271}
   - component: {fileID: 1595567270}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -17018,7 +17054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770165020}
   - component: {fileID: 1770165021}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -18609,7 +18645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915698155}
   - component: {fileID: 1915698154}
-  m_Layer: 19
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
