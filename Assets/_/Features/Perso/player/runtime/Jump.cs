@@ -58,7 +58,7 @@ namespace PlayerRunTime
             if (!_canJump) return;
             if (_characterController.isGrounded)
             {
-                AudioManager.Instance.PlaySFX(_jumpSound);
+                AudioManager._Instance.PlaySFX(_jumpSound);
                 _autorun.SetVelocityY(_jumpForce);
             }
         }

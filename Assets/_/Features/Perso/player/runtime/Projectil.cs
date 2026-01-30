@@ -30,7 +30,7 @@ namespace PlayerRunTime
 
         private void OnCollisionEnter(Collision collision)
         {
-            AudioManager.Instance.PlaySFX(_hitSound);
+            AudioManager._Instance.PlaySFX(_hitSound);
 
             // Instancier l'explosion à la position de la collision
             if (_explosionVFXPrefab != null)

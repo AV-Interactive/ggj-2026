@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.AudioManager
   _sfxSource: {fileID: 2036165976875706382}
+  _volume: 0
 --- !u!82 &2036165976875706382
 AudioSource:
   m_ObjectHideFlags: 0
