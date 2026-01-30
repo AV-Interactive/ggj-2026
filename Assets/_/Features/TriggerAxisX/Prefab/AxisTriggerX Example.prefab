@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 279134298177662829}
   - component: {fileID: 1795914645401456623}
-  - component: {fileID: 2055200531667588095}
   m_Layer: 0
   m_Name: AxisTriggerX Example
   m_TagString: Untagged
@@ -90,7 +89,7 @@ MonoBehaviour:
   m_onObserverEnterFromLeftZone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055200531667588095}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerRunTime.SkillZoneConnector, PlayerRunTime
         m_MethodName: ApplyZoneRules
         m_Mode: 1
@@ -111,7 +110,7 @@ MonoBehaviour:
   m_onObserverExitFromRigthZone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2055200531667588095}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerRunTime.SkillZoneConnector, PlayerRunTime
         m_MethodName: ReleaseZoneRules
         m_Mode: 1
@@ -127,19 +126,6 @@ MonoBehaviour:
   m_lineColorLeft: {r: 0, g: 1, b: 0, a: 1}
   m_lineColorRight: {r: 1, g: 0, b: 0, a: 1}
   m_distanceToDrawUp: 10
---- !u!114 &2055200531667588095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650615739908713371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdebcfc89c4d4675b3d3483b2224798b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: PlayerRunTime::PlayerRunTime.SkillZoneConnector
-  _alowedSkill: 1
 --- !u!1 &2939457444980548619
 GameObject:
   m_ObjectHideFlags: 0
