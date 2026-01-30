@@ -13,6 +13,7 @@ namespace PlayerRunTime
         [SerializeField] private AudioClip _planeSound;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private float _groundCheckDistance = 0.2f;
+        [SerializeField] private Animator _animator;
 
         [Header("Debug")]
         [SerializeField] private float _currentGravityMultiplier = 1f; // ← Affichage de la gravité
