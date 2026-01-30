@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 149995530887378361}
   - component: {fileID: 4430479479292954059}
   - component: {fileID: 9149888747744448717}
-  - component: {fileID: 2543045586115177347}
+  - component: {fileID: 4877492449729672089}
   m_Layer: 19
   m_Name: Enemy
   m_TagString: Untagged
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 566c5028924a7e8469e18645e0165790, type: 2}
+  - {fileID: 2100000, guid: 71f3965ffc355cb45907c1e52bc4140f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,8 +90,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2543045586115177347
-SphereCollider:
+--- !u!65 &4877492449729672089
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,5 +109,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0478032, y: 4.0520835, z: 1.0000004}
+  m_Center: {x: 0.02390127, y: 1.0260403, z: -0.000000096136525}
