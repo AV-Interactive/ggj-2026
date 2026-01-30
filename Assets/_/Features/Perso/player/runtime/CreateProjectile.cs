@@ -57,7 +57,7 @@ namespace PlayerRunTime
 
             if (_projectilPrefab != null)
             {
-                AudioManager.Instance.PlaySFX(_shootSound); // 🔊 ICI
+                AudioManager._Instance.PlaySFX(_shootSound); // 🔊 ICI
 
                 Vector3 mouseDirection = GetMouseWorldDirection();
                 Quaternion rotation = Quaternion.LookRotation(mouseDirection);
