@@ -634,6 +634,11 @@ MonoBehaviour:
   _glidingGravityScale: 0.1
   _fallThreshold: -0.1
   _planeSound: {fileID: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _groundCheckDistance: 0.2
+  _currentGravityMultiplier: 1
 --- !u!114 &4329795521087014579
 MonoBehaviour:
   m_ObjectHideFlags: 0
