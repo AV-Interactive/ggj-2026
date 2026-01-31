@@ -6993,6 +6993,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 251126848224861067, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 637218465360426144, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: _GameWinPrefab
       value: 
@@ -7000,6 +7004,10 @@ PrefabInstance:
     - target: {fileID: 1122712754372999666, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_Name
       value: TUTO
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310883440759472824, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4120117710124722933, guid: b6ba1a21d10a0436fa943b97183dfd28, type: 3}
       propertyPath: m_LocalPosition.x
