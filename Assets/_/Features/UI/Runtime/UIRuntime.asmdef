@@ -1,0 +1,16 @@
+{
+    "name": "UIRuntime",
+    "rootNamespace": "UIRuntime",
+    "references": [
+        "GUID:898b06506281c41e894a78c599c2099d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
