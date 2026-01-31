@@ -20,6 +20,18 @@ namespace Utils
 
 
         #region Main Methods
+
+        public void SetOnOff(bool value)
+        {
+            if (value)
+            {
+                SetOnOff(1);
+            }
+            else
+            {
+                SetOnOff(0);
+            }
+        }
         
         public void SetOnOff(int onOff)
         {
