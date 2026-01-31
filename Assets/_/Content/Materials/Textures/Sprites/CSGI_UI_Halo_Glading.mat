@@ -50,7 +50,7 @@ Material:
     - _GreenAdjustment: 1
     - _HighLight: 1
     - _Hovers: 1
-    - _IsActif: 0
+    - _IsActif: 1
     - _OFF: 1
     - _ON_OFF: 0
     - _RedAdjustment: 1
