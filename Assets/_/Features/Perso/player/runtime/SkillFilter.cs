@@ -9,6 +9,7 @@ namespace PlayerRunTime
         #region Publics
 
         public static SkillFilter Instance { get; private set; }
+        public Action<SkillFilter> _onChanged;
 
         public bool CanJump { get; private set; } = false;
         public bool CanAttack { get; private set; } = false;
@@ -42,6 +43,7 @@ namespace PlayerRunTime
             CanAttack = true;
             CanScale = true;
             CanPlane = true;
+            RaiseNotifyChange();
         }
 
         public void DeactivateAllMasks()
@@ -50,30 +52,40 @@ namespace PlayerRunTime
             CanAttack  = false;
             CanScale = false;
             CanPlane = false;
+            RaiseNotifyChange();
+        }
+
+        public void RaiseNotifyChange()
+        {
+            _onChanged?.Invoke(this);
         }
 
         public void ActivateJump(bool isActive)
         {
             DeactivateAllMasks();
             CanJump = isActive;
+            RaiseNotifyChange();
         }
         
         public void ActivateAttack(bool isActive)
         {
             DeactivateAllMasks();
             CanAttack =  isActive;
+            RaiseNotifyChange();
         }
         
         public void ActivateScale(bool isActive)
         {
             DeactivateAllMasks();
             CanScale = isActive;
+            RaiseNotifyChange();
         }
         
         public void ActivatePlane(bool isActive)
         {
             DeactivateAllMasks();
             CanPlane = isActive;
+            RaiseNotifyChange();
         }
 
         #endregion
