@@ -53,7 +53,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 4085863482398630915}
           m_TargetAssemblyTypeName: InputTypeMono_GamepadToMaskGameFacade, be.elab.isgamepadinput
-          m_MethodName: TriggerMaskSize
+          m_MethodName: TriggerMaskScale
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -172,6 +172,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_isPressed: 0
+--- !u!1 &1077901134620959985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7864927693667080046}
+  m_Layer: 0
+  m_Name: Request
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7864927693667080046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077901134620959985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7707895818715936739}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201444045865952906
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +287,73 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1203067055933893847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4484732170239122283}
+  - component: {fileID: 5644645630660169410}
+  m_Layer: 0
+  m_Name: Action Requested
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4484732170239122283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203067055933893847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8736647168539734134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5644645630660169410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203067055933893847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d4822d6e4adba4bb29960251a079ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.tickcollection.Runtime::Eloi.Tick.TickMono_InputButton
+  m_inputAction: {fileID: 7865231767939514627, guid: c7ad9a7958d343d4ab504a9729c53e04, type: 3}
+  m_onChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4085863482398630915}
+        m_TargetAssemblyTypeName: InputTypeMono_GamepadToMaskGameFacade, be.elab.isgamepadinput
+        m_MethodName: TriggerMaskAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onUp:
+    m_PersistentCalls:
+      m_Calls: []
+  m_isPressed: 0
 --- !u!1 &2049232622298254713
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,41 +606,34 @@ MonoBehaviour:
   m_joystickValue: {x: 0, y: 0}
   m_onValueChangedX:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1021298880141046695}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onValueChangedY:
     m_PersistentCalls:
-      m_Calls: []
---- !u!1 &2895178470796255411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9081111458080938366}
-  m_Layer: 0
-  m_Name: AnthonyScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9081111458080938366
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2895178470796255411}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7707895818715936739}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+      m_Calls:
+      - m_Target: {fileID: 4166062179000447234}
+        m_TargetAssemblyTypeName: Eloi.Tick.TickMono_AxisValueToBoolEvent, be.elab.tickcollection.Runtime
+        m_MethodName: PushInAxisValue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2941314103863619083
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +800,7 @@ Transform:
   m_Children:
   - {fileID: 6741790034569631126}
   - {fileID: 9116539416367606272}
+  - {fileID: 4484732170239122283}
   m_Father: {fileID: 661182233658949096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3325610235896116743
@@ -764,7 +856,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 4085863482398630915}
           m_TargetAssemblyTypeName: InputTypeMono_GamepadToMaskGameFacade, be.elab.isgamepadinput
-          m_MethodName: TriggerMaskPlane
+          m_MethodName: TriggerMaskGlide
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -827,7 +919,7 @@ GameObject:
   - component: {fileID: 7707895818715936739}
   - component: {fileID: 4085863482398630915}
   m_Layer: 0
-  m_Name: Mask
+  m_Name: MaskFacade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,7 +938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9081111458080938366}
+  - {fileID: 7864927693667080046}
   m_Father: {fileID: 661182233658949096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4085863482398630915
@@ -864,27 +956,111 @@ MonoBehaviour:
   m_onProjectileAngleChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_onMaskPlaneRequested:
+  m_onMaskGlideRequested:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Glide
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onMaskJumpRequested:
     m_PersistentCalls:
-      m_Calls: []
-  m_onMaskSizeRequested:
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Jump
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onMaskScaleRequested:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scale
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onMaskProjectileRequested:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Projectile
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onMaskActionRequested:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Action Request
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onMenuLeftCalled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Call Menu Left
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onMenuRightCalled:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1077901134620959985}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Call Menu Right
+          m_BoolArgument: 0
+        m_CallState: 2
   m_currentAngleFromGroundToTop: 0
 --- !u!1 &8716704171300913311
 GameObject:

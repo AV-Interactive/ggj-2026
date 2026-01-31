@@ -4,18 +4,18 @@ using UnityEngine.Events;
 public class InputTypeMono_GamepadToMaskGameFacade : MonoBehaviour
 {
     public UnityEvent<float> m_onProjectileAngleChanged;
-    public UnityEvent m_onMaskPlaneRequested;
+    public UnityEvent m_onMaskGlideRequested;
     public UnityEvent m_onMaskJumpRequested;
-    public UnityEvent m_onMaskSizeRequested;
+    public UnityEvent m_onMaskScaleRequested;
     public UnityEvent m_onMaskProjectileRequested;
     public UnityEvent m_onMaskActionRequested;
 
     public UnityEvent m_onMenuLeftCalled;
     public UnityEvent m_onMenuRightCalled;
 
-    [ContextMenu("TriggerMaskPlane")]
-    public void TriggerMaskPlane() {
-        m_onMaskPlaneRequested?.Invoke();
+    [ContextMenu("TriggerMaskGlide")]
+    public void TriggerMaskGlide() {
+        m_onMaskGlideRequested?.Invoke();
     }
     [ContextMenu("TriggerMaskJump")]
     public void TriggerMaskJump() {
@@ -23,9 +23,9 @@ public class InputTypeMono_GamepadToMaskGameFacade : MonoBehaviour
         m_onMaskJumpRequested?.Invoke();
     }
     [ContextMenu("TriggerMaskSize")]
-    public void TriggerMaskSize() {
+    public void TriggerMaskScale() {
 
-        m_onMaskSizeRequested?.Invoke();
+        m_onMaskScaleRequested?.Invoke();
     }
     [ContextMenu("TriggerMaskProjectile")]
     public void TriggerMaskProjectile() {
@@ -34,7 +34,7 @@ public class InputTypeMono_GamepadToMaskGameFacade : MonoBehaviour
     }
 
     [ContextMenu("TrigerMaskAction")]
-    public void TrigerMaskAction() {
+    public void TriggerMaskAction() {
 
         m_onMaskActionRequested?.Invoke();
     }
