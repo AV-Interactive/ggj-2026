@@ -1093,18 +1093,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2064,18 +2052,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 7.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 17.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 11.38
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -2557,18 +2533,6 @@ PrefabInstance:
     - target: {fileID: 4376300637326973288, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_Name
       value: Decors (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -8817,18 +8781,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -12744,18 +12696,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -12874,18 +12814,6 @@ PrefabInstance:
     - target: {fileID: 4376300637326973288, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_Name
       value: Decors (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 62
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -14705,18 +14633,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -16462,18 +16378,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Decors (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 7.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 17.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 11.38
-      objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -16660,18 +16564,6 @@ PrefabInstance:
     - target: {fileID: 4376300637326973288, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_Name
       value: Decors (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -19449,18 +19341,6 @@ PrefabInstance:
     - target: {fileID: 4376300637326973288, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_Name
       value: Decors
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.x
-      value: 11.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.y
-      value: 19.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 5480707345666313528, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
-      propertyPath: m_Size.z
-      value: -8.4
       objectReference: {fileID: 0}
     - target: {fileID: 6945904720689153930, guid: 12f26cdcf60dfac409ced201e08b9bbd, type: 3}
       propertyPath: m_LocalScale.x
