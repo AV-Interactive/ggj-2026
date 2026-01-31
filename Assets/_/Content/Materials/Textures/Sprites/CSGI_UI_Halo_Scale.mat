@@ -64,7 +64,7 @@ Material:
     - _UIMaskSoftnessY: 1
     m_Colors:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _ColorHalo: {r: 1.796974, g: 23.968628, b: 0, a: 1}
+    - _ColorHalo: {r: 0, g: 2.7432096, b: 31.999996, a: 1}
     - _NoiseSpeed: {r: 0.5, g: 0, b: 0, a: 0}
     - _Tint: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
