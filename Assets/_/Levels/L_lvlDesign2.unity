@@ -21486,7 +21486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 149995530887378361, guid: e52963fca0f363c48b0ed1c40be7f8b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.9
+      value: 26.89
       objectReference: {fileID: 0}
     - target: {fileID: 149995530887378361, guid: e52963fca0f363c48b0ed1c40be7f8b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21520,6 +21520,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 149995530887378361, guid: e52963fca0f363c48b0ed1c40be7f8b7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430479479292954059, guid: e52963fca0f363c48b0ed1c40be7f8b7, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -3756336903783932622, guid: 38fb4625a94c82d4aa443ed7e861b399, type: 3}
     - target: {fileID: 6187116401659593507, guid: e52963fca0f363c48b0ed1c40be7f8b7, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
