@@ -47,7 +47,6 @@ namespace Enemy.Runtime
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
                 EventsRuntime.EnemyEvents.RaiseHit(gameObject);
-                Debug.Log(gameObject.name + " hit");
             }
         }
 

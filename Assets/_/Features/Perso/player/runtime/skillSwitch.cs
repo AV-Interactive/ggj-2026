@@ -63,8 +63,7 @@ namespace PlayerRunTime
                     skillName = "Aucun Skill";
                     break;
             }
-
-            Debug.Log($"Skill séléctionné : {skillName}");
+            
         }
 
         #endregion

@@ -9,7 +9,6 @@ namespace EventsRuntime
 
         public static void RaiseZoneCompleted(bool completed, GameObject zone)
         {
-            Debug.Log($"Zone {zone.name} complétée !");
             OnZoneCompleted?.Invoke(completed, zone);
         }
     }
