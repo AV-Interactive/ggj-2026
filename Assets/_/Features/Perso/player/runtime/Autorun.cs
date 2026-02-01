@@ -1,3 +1,4 @@
+using EventsRuntime;
 using UnityEngine;
 
 namespace PlayerRunTime
@@ -48,9 +49,16 @@ namespace PlayerRunTime
 
         private void ApplyGravity()
         {
+            if (_lastPosY > transform.position.y)
+            {
+                // On tombe, on envoie un signal pour avertir
+                PlayerEvents.RaiseFall();
+            }
+            
             // Vérifier si on est au sol
             if (_characterController.isGrounded && _velocity.y < 0)
             {
+                _lastPosY = transform.position.y;
                 _velocity.y = -2f; // Petite valeur pour rester collé au sol
             }
 
@@ -80,7 +88,10 @@ namespace PlayerRunTime
         #endregion
 
         #region Privates and Protected
+        
         private Vector3 _velocity;
+        float _lastPosY;
+
         #endregion
     }
 }
