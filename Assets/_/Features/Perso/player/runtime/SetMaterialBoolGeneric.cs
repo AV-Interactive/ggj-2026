@@ -35,7 +35,7 @@ namespace Utils
         
         public void SetOnOff(int onOff)
         {
-            Debug.Log($"On Off: {onOff}");
+            //Debug.Log($"On Off: {onOff}");
             _materialTarget.SetInt(_propertyName, onOff);
         }
         
