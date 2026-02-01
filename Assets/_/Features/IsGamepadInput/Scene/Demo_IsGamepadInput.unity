@@ -425,6 +425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1856734209540494957, guid: 42c9fda10e3396a438c1012cf03aae49, type: 3}
+      propertyPath: m_cameraDebug
+      value: 
+      objectReference: {fileID: 1867671048}
     - target: {fileID: 7302329806330549754, guid: 42c9fda10e3396a438c1012cf03aae49, type: 3}
       propertyPath: m_Name
       value: IsGamepadInputWithMask
