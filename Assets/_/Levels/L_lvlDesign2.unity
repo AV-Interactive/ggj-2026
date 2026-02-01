@@ -11652,7 +11652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1545767080099107219, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: FollowOffset.x
-      value: 21.73
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1545767080099107219, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: FollowOffset.y
@@ -11664,7 +11664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1712547530100531638, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -486.80923
+      value: -489.53925
       objectReference: {fileID: 0}
     - target: {fileID: 1712547530100531638, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11702,6 +11702,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4036654796961252065, guid: d53d3e557505042929246b3bd7b011be, type: 3}
+      propertyPath: Target.TrackingTarget
+      value: 
+      objectReference: {fileID: 1654673122}
     - target: {fileID: 5913691232258489749, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: m_Name
       value: CAMERA
@@ -11752,7 +11756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8562014666016014628, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -486.80923
+      value: -489.53925
       objectReference: {fileID: 0}
     - target: {fileID: 8562014666016014628, guid: d53d3e557505042929246b3bd7b011be, type: 3}
       propertyPath: m_LocalPosition.y
