@@ -91,11 +91,21 @@ namespace PlayerRunTime
         /// <summary>
         /// Passe le timer et charge immédiatement la scène
         /// </summary>
-        public void SkipTimer()
+        public void SkipTimer(bool skip)
         {
+            if (!skip) return; // Ne rien faire si skip est false
+
             Debug.Log("Timer passé ! Chargement immédiat de la scène...");
             _isTimerActive = false;
             LoadScene();
+        }
+
+        /// <summary>
+        /// Surcharge pour les boutons UI (sans paramètre)
+        /// </summary>
+        public void SkipTimer()
+        {
+            SkipTimer(true);
         }
 
         /// <summary>
