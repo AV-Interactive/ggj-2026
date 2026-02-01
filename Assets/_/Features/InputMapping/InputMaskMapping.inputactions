@@ -93,28 +93,6 @@
                 },
                 {
                     "name": "",
-                    "id": "3fdee776-8530-4c25-89d9-3238781c2db4",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7655015e-a2e8-4aa3-9679-c4ba72f9880a",
-                    "path": "<HID::USB gamepad>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "cbe6ae61-557e-4204-8cfa-cdb7c104a4a5",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -137,41 +115,8 @@
                 },
                 {
                     "name": "",
-                    "id": "7fc08ee3-c643-4e79-a0d9-b054b7bbdd3c",
-                    "path": "<HID::USB gamepad>/button10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RestartLevel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f4390fed-1af6-40c7-9146-1595f8d6cd37",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RestartLevel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2b8c3d23-3697-4386-a2a1-abdb43354e66",
                     "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChoiceJump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "db7b8b1a-ed50-46cf-a924-3cc4349e6cf7",
-                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -192,17 +137,6 @@
                 },
                 {
                     "name": "",
-                    "id": "7cc5a740-2acb-4bf7-8d6d-a2f15e392ebb",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChoiceAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a931c407-f5fe-4fe4-8bcf-2b643689cac4",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -214,30 +148,8 @@
                 },
                 {
                     "name": "",
-                    "id": "5f89a0dd-44ed-4ebb-b826-827c54af9ab8",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChoiceScale",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "dbfe4068-6785-493d-b5d0-4bf9d6f674c4",
                     "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChoicePlane",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a7bd05d3-f95e-467f-87ef-0dbffbc0b5a6",
-                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -1,4 +1,5 @@
 using System;
+using EventsRuntime;
 using UnityEngine;
 namespace PlayerRunTime
 {
@@ -11,12 +12,18 @@ namespace PlayerRunTime
         [SerializeField] private AudioClip _jumpSound;
         [SerializeField] private Animator _animator;
         [SerializeField] private LayerMask _groundLayer;
+        
+        
+        
         #endregion
+        
         #region Unity API
+        
         void OnEnable()
         {
             _canJump = true;
         }
+        
         void OnDisable()
         {
             _canJump = false;
@@ -25,6 +32,7 @@ namespace PlayerRunTime
                 _animator.SetBool("IsJumping", false);
             }
         }
+        
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -59,12 +67,14 @@ namespace PlayerRunTime
             }
         }
         #endregion
+        
         #region Main Methods
         public void OnJump(bool isJumping)
         {
             if (!_canJump) return;
             Jump();
         }
+        
         public void Jump()
         {
             if (!_canJump) return;
@@ -72,6 +82,9 @@ namespace PlayerRunTime
             {
                 AudioManager._Instance.PlaySFX(_jumpSound);
                 _autorun.SetVelocityY(_jumpForce);
+                
+                // On emet un signal pour changer la camera
+                PlayerEvents.RaiseJump(true);
 
                 // Active l'animation de saut
                 if (_animator != null)
@@ -80,6 +93,7 @@ namespace PlayerRunTime
                 }
             }
         }
+        
         #endregion
         #region Utils
         private bool CheckGrounded()
@@ -87,6 +101,7 @@ namespace PlayerRunTime
             // Utilise le CharacterController pour vérifier si au sol
             if (_characterController.isGrounded)
             {
+                PlayerEvents.RaiseJump(false);
                 return true;
             }
 
@@ -97,6 +112,7 @@ namespace PlayerRunTime
             return Physics.Raycast(origin, Vector3.down, rayDistance, _groundLayer);
         }
         #endregion
+        
         #region Privates and Protected
 
         // Variables privées

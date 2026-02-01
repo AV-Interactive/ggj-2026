@@ -69,7 +69,6 @@ namespace PlayerRunTime
         {
             if (_skillSelected == skill)
             {
-                Debug.Log($"[Player] Skill {skill} déjà sélectionné.");
                 return;
             }
 
@@ -116,7 +115,6 @@ namespace PlayerRunTime
                 config.Script.enabled = true;
                 config.MaskModel.SetActive(true);
                 EnemyEvents.RaiseChangeSkill(skill);
-                Debug.Log($"[Player] Skill switché vers : {skill}");
             }
             else
             {
