@@ -5,6 +5,7 @@ using UnityEngine;
 public class GamePadToGameGGJ : MonoBehaviour
 {
 
+    
     public bool m_killSwitch = false;
 
     public void SetAsActive(bool active) {
@@ -32,6 +33,41 @@ public class GamePadToGameGGJ : MonoBehaviour
 
     public bool m_isInMenuPause = false;
 
+    public Transform m_cursorDebug;
+    public Camera m_cameraDebug;
+
+    public void PushFakeMousePositionFromAngleN90p90(float angleN90p90)
+    {
+        if (m_killSwitch) return;
+        int screenWidth = Screen.width;
+        int screenHeight = Screen.height;
+        float x = Mathf.Cos(angleN90p90 * Mathf.Deg2Rad);
+        float y = Mathf.Sin(angleN90p90 * Mathf.Deg2Rad);
+        Vector2 directionRelativeInPx = new Vector2(x * (screenWidth / 2f), y * (screenHeight / 2f));
+        Vector2 screenCenter = new Vector2(screenWidth / 2f, screenHeight / 2f);
+        Vector2 mousePosition = screenCenter + directionRelativeInPx;
+        if (m_actionProjectile)
+            m_actionProjectile.SetMousePosition(mousePosition);
+        if (m_cursorDebug != null && m_cameraDebug != null)
+        {
+            Ray ray = m_cameraDebug.ScreenPointToRay(mousePosition);
+            Plane plane = new Plane(Vector3.forward, Vector3.zero);
+            if (plane.Raycast(ray, out float enter))
+            {
+                Vector3 hitPoint = ray.GetPoint(enter);
+                if(m_cursorDebug)
+                m_cursorDebug.position = hitPoint;
+            }
+        }
+    }
+
+    public void PushFakeMousePosition(Vector2 mousePosition) {
+
+        if (m_killSwitch) return;
+        if(m_actionProjectile)
+        m_actionProjectile.SetMousePosition(mousePosition);
+    }
+
     [ContextMenu("Auto Join")]
     public void AutoJoin() {
 
@@ -49,43 +85,53 @@ public class GamePadToGameGGJ : MonoBehaviour
         if (m_killSwitch) return;
 
         m_isInMenuPause = !m_isInMenuPause;
-        m_pauseManager.PauseGame(m_isInMenuPause);
+        if (m_pauseManager)
+            m_pauseManager.PauseGame(m_isInMenuPause);
     }
     public void RestartLevel()
     {
         if (m_killSwitch) return;
-        m_restartLevel.RestartCurrentLevel();
+        if (m_restartLevel)
+            m_restartLevel.RestartCurrentLevel();
     }
 
     public void RequestMaskAction()
     {
         if (m_killSwitch) return;
+        if(m_actionProjectile)
         m_actionProjectile.OnShoot(true);
-        m_actionJump.OnJump(true);
-        m_actionScale.OnScaleDown(true);
-        m_actionPlane.SetGliderActive(true);
+        if (m_actionJump)
+            m_actionJump.OnJump(true);
+        if (m_actionScale)
+            m_actionScale.OnScaleDown(true);
+        if (m_actionPlane)
+            m_actionPlane.SetGliderActive(true);
     }
 
     public void RequestMaskJump() {
 
         if (m_killSwitch) return;
-        m_playerToAffect.OnJumpSelected();
+        if (m_playerToAffect)
+            m_playerToAffect.OnJumpSelected();
     }
     public void RequestMaskProjectile() {  
         if (m_killSwitch) return;
-    
-        m_playerToAffect.OnAttackSelected();
+
+        if (m_playerToAffect)
+            m_playerToAffect.OnAttackSelected();
     }
     public void RequestMaskGlide()
     {
         if (m_killSwitch) return;
-    m_playerToAffect.OnPlaneSelected();
+        if (m_playerToAffect)
+            m_playerToAffect.OnPlaneSelected();
 
     }
     public void RequestMaskScale()
     {
         if (m_killSwitch) return;
-    m_playerToAffect.OnScaleSelected();
+        if(m_playerToAffect)
+        m_playerToAffect.OnScaleSelected();
 
     }
 
