@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using EventsRuntime;
+using UnityEngine;
 namespace PlayerRunTime
 {
     public class Planneur : MonoBehaviour
@@ -17,7 +19,14 @@ namespace PlayerRunTime
         [Header("Debug")]
         [SerializeField] private float _currentGravityMultiplier = 1f; // ← Affichage de la gravité
         #endregion
+        
         #region Unity API
+
+        void OnEnable()
+        {
+            PlayerEvents.OnFall += OnFalling;
+        }
+
         private void Reset()
         {
             _characterController = GetComponent<CharacterController>();
@@ -39,7 +48,7 @@ namespace PlayerRunTime
                 _animator = GetComponent<Animator>();
             }
         }
-        private void Update()
+        void Update()
         {
             CheckGroundCollision();
             _currentGravityMultiplier = GetGravityMultiplier(); // ← Mise à jour de l'affichage
@@ -76,6 +85,7 @@ namespace PlayerRunTime
             }
         }
         #endregion
+        
         #region Main Methods
         public float GetGravityMultiplier()
         {
@@ -133,16 +143,27 @@ namespace PlayerRunTime
                 _animator.SetBool("IsGliding", true);
             }
         }
-        public bool IsGliderActive()
-        {
-            return _isGliderActive;
-        }
+
         #endregion
+        
         #region Utils
+
+        void OnFalling()
+        {
+            Debug.Log("On m'a dit que on tombe là");
+            _isGliderActive = true;
+        }
+        
         private bool IsFalling()
         {
             return _autorun.GetVelocity().y < _fallThreshold;
         }
+        #endregion
+        
+        #region privates
+        
+        //
+
         #endregion
     }
 }

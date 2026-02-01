@@ -14,7 +14,9 @@ public class GamePadToGameGGJ : MonoBehaviour
     }
 
     public void SetAsActiveOn()
-    {SetAsActive(true);
+    {
+        SetAsActive(true);
+        PushFakeMousePositionFromAngleN90p90(0);
     }
     public void SetAsActiveOff()
     {
@@ -33,8 +35,10 @@ public class GamePadToGameGGJ : MonoBehaviour
 
     public bool m_isInMenuPause = false;
 
-    public Transform m_cursorDebug;
     public Camera m_cameraDebug;
+    public Transform m_cursorDebug;
+
+    public bool m_autoJoinAtAwake = true;
 
     public void PushFakeMousePositionFromAngleN90p90(float angleN90p90)
     {
@@ -68,16 +72,37 @@ public class GamePadToGameGGJ : MonoBehaviour
         m_actionProjectile.SetMousePosition(mousePosition);
     }
 
+    public void Awake()
+    {
+        if (m_autoJoinAtAwake)
+            AutoJoin();
+    }
+
     [ContextMenu("Auto Join")]
     public void AutoJoin() {
 
-        m_playerToAffect = FindFirstObjectByType<PlayerRunTime.Player>();
-        m_actionProjectile = FindFirstObjectByType<PlayerRunTime.CreateProjectile>();
-        m_actionJump = FindFirstObjectByType<PlayerRunTime.Jumps>();
+        if(m_playerToAffect!=null)
+            m_playerToAffect = FindFirstObjectByType<PlayerRunTime.Player>();
+        if (m_actionProjectile != null)
+            m_actionProjectile = FindFirstObjectByType<PlayerRunTime.CreateProjectile>();
+        
+        if (m_actionJump != null)
+            m_actionJump = FindFirstObjectByType<PlayerRunTime.Jumps>();
+        
+        if (m_actionScale != null)
         m_actionScale = FindFirstObjectByType<PlayerRunTime.Scale>();
-        m_actionPlane = FindFirstObjectByType<PlayerRunTime.Planneur>();
-        m_pauseManager = FindFirstObjectByType<PauseManager>();
-        m_restartLevel = FindFirstObjectByType<RestartLevel>();
+
+        if (m_actionPlane != null)        
+            m_actionPlane = FindFirstObjectByType<PlayerRunTime.Planneur>();
+        
+        if (m_pauseManager != null)
+            m_pauseManager = FindFirstObjectByType<PauseManager>();
+
+        if (m_restartLevel != null)
+            m_restartLevel = FindFirstObjectByType<RestartLevel>();
+
+        if (m_cameraDebug == null)
+            m_cameraDebug = Camera.main;
 
     }
     public void CallMenuPause()

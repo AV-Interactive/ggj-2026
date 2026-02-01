@@ -27,7 +27,6 @@ namespace UIRuntime
 
         public void OnGameOver()
         {
-            Debug.Log("On m'appel !!");
             _isActive = !_isActive;
             CheckGameOver(_isActive);
         }

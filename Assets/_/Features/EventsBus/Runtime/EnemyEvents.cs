@@ -11,7 +11,6 @@ namespace EventsRuntime
 
         public static void RaiseHit(GameObject gameObject)
         {
-            Debug.Log($"On a reçu la demande d'event pour {gameObject.name}");
             OnHit?.Invoke(gameObject);
         }
 
