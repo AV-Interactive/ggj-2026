@@ -18969,10 +18969,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 470247151147340221, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_layerMask.m_Bits
-      value: 786432
-      objectReference: {fileID: 0}
     - target: {fileID: 1196948179156020014, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -398.605
@@ -19094,10 +19090,6 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6786013660868377928, guid: c3062abebb13faa49a57405445a4447a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6786013660868377928, guid: c3062abebb13faa49a57405445a4447a, type: 3}
       propertyPath: m_layerMask.m_Bits
       value: 786432
       objectReference: {fileID: 0}
@@ -19125,8 +19117,7 @@ PrefabInstance:
       propertyPath: m_onDown.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerRunTime.Jumps, PlayerRunTime
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6786013660868377928, guid: c3062abebb13faa49a57405445a4447a, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1196948179156020014, guid: c3062abebb13faa49a57405445a4447a, type: 3}
